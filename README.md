@@ -1,5 +1,5 @@
 # Rombo Works
-Este repositorio contiene el código fuente para el sitio web oficial de **Rombo Works**.
+Este repositorio contiene el código fuente del front end para el sitio web oficial de **Rombo Works**.
 
 ## Stack
 - **Angular**: Para el front del sitio.
