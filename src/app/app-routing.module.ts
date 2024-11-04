@@ -6,7 +6,7 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 
 const routes: Routes = [
-  { path: '', component: InicioComponent },
+  { path: 'inicio', component: InicioComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'faqs', component: FaqsComponent },
   { path: 'sobre-nosotros', component: SobreNosotrosComponent },
