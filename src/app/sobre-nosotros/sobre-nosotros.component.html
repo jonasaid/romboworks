@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rombo Works - Sobre Nosotros</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
   <link href="./sobre-nosotros.component.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 font-roboto text-gray-800">
@@ -17,17 +19,30 @@
     
     
 
-  <section class="mission-vision flex flex-col md:flex-row justify-around bg-white p-8">
-    <div class="mission mb-8 md:mb-0 md:w-1/2 text-center md:text-left">
-      <h2 class="text-2xl font-semibold text-gray-900">Misión</h2>
-      <p class="mt-2 text-gray-700">Ofrecer soluciones tecnológicas disruptivas para un crecimiento sostenible. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="vision md:w-1/2 text-center md:text-left">
-      <h2 class="text-2xl font-semibold text-gray-900">Visión</h2>
-      <p class="mt-2 text-gray-700">Liderar el desarrollo de software innovador con soluciones escalables. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </section>
+    <section class="mission-vision flex flex-col md:flex-row justify-around bg-white p-8">
+      <div class="mission mb-8 md:mb-0 md:w-1/2">
+        <h2 class="text-2xl font-semibold text-blue-500">Innovative Financial Solutions</h2>
+      </div>
+      <div class="vision-container md:w-1/2 text-gray-700">
+        <div class="mission-text mb-8">
+          <p><strong>Misión</strong><br> At Rombo Works, we are committed to delivering disruptive technology solutions that transform the financial sector.</p>
+        </div>
+        <div class="vision-text">
+          <p><strong>Visión</strong><br> Our vision is to lead in innovative software development, empowering clients with scalable and secure solutions for sustainable growth.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="history flex flex-col md:flex-row justify-around bg-white p-8">
+      <div class="history-title md:w-1/2">
+        <h2 class="text-2xl font-semibold text-blue-500">History</h2>
+      </div>
+      <div class="history-content md:w-1/2 text-gray-700">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+      </div>
+    </section>
+    
+    
   <section class="team bg-gray-50 p-8">
     <h2 class="text-3xl font-semibold text-center text-gray-900">Nuestro Equipo</h2>
     <div class="team-members mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -41,30 +56,148 @@
     </div>
   </section>
 
-  <section class="history bg-white p-8">
-    <h2 class="text-3xl font-semibold text-center text-gray-900">Nuestra Historia</h2>
-    <p class="mt-4 text-center max-w-2xl mx-auto text-gray-700">Fundada en 2010, Rombo Works ha empujado constantemente los límites de la tecnología en el sector financiero, ayudando a nuestros clientes a lograr sus objetivos a través de la innovación y la excelencia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel urna nec dui vehicula aliquam.</p>
-  </section>
 
-  <section class="testimonials bg-gray-50 p-8">
-    <h2 class="text-3xl font-semibold text-center text-gray-900">Testimonios de Clientes</h2>
-    <div class="testimonials-list mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <div class="testimonial bg-white p-6 rounded-lg shadow-lg text-center">
-        <p class="italic text-gray-800">"Rombo Works ha revolucionado nuestros procesos financieros con sus soluciones."</p>
-        <p class="mt-4 font-semibold text-gray-900">Juan Pérez</p>
-        <p class="text-blue-500">CEO, FinTech Corp</p>
+  <section class="testimonials bg-white p-12">
+    <h2 class="text-3xl font-semibold text-center text-blue-500 mb-4">Customer Testimonials</h2>
+    <p class="text-center text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  
+    <div class="testimonials-list flex flex-col md:flex-row justify-center gap-8">
+      <!-- Testimonial 1 -->
+      <div class="testimonial bg-white p-6 rounded-lg shadow-lg text-left max-w-md">
+        <div class="stars text-blue-500 text-lg mb-4">
+          ★★★★★
+        </div>
+        <p class="text-gray-800 italic mb-4">"Rombo Works transformed our financial operations with their innovative
+          solutions. Their expertise and commitment to security have made a significant difference in our efficiency."</p>
+        <div class="flex items-center mt-4">
+          <img src="path/to/avatar1.jpg" alt="John Doe" class="w-10 h-10 rounded-full mr-3">
+          <div>
+            <p class="font-semibold text-gray-900">John Doe</p>
+            <p class="text-gray-500 text-sm">CEO, FinTech Inc.</p>
+          </div>
+        </div>
+        <img src="path/to/logo1.png" alt="Company Logo" class="mt-4 w-16">
       </div>
-      <!-- Agrega otros testimonios de manera similar -->
+  
+      <!-- Testimonial 2 -->
+      <div class="testimonial bg-white p-6 rounded-lg shadow-lg text-left max-w-md">
+        <div class="stars text-blue-500 text-lg mb-4">
+          ★★★★★
+        </div>
+        <p class="text-gray-800 italic mb-4">"The team at Rombo Works delivered beyond our expectations. Their solutions
+          not only improved our compliance but also enhanced our customer experience immensely."</p>
+        <div class="flex items-center mt-4">
+          <img src="path/to/avatar2.jpg" alt="Jane Smith" class="w-10 h-10 rounded-full mr-3">
+          <div>
+            <p class="font-semibold text-gray-900">Jane Smith</p>
+            <p class="text-gray-500 text-sm">Director, Bank Corp.</p>
+          </div>
+        </div>
+        <img src="path/to/logo2.png" alt="Company Logo" class="mt-4 w-16">
+      </div>
+    </div>
+  
+    <!-- Pagination Dots and Navigation Arrows -->
+    <div class="pagination-container flex items-center justify-center mt-8">
+      <div class="pagination-dots flex gap-3">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="flex items-center gap-4 ml-6">
+        <button class="navigation-button">
+          <span class="material-icons">arrow_back</span>
+        </button>
+        <button class="navigation-button">
+          <span class="material-icons">arrow_forward</span>
+        </button>
+      </div>
     </div>
   </section>
 
+
   <section class="contact bg-white p-8 text-center">
-    <h2 class="text-3xl font-semibold text-gray-900">Contáctanos</h2>
-    <p class="mt-4 max-w-2xl mx-auto text-gray-700">Conéctate con nosotros para explorar soluciones innovadoras adaptadas a tus necesidades y objetivos financieros. Transformemos juntos el sector financiero.</p>
-    <button class="mt-6 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">
-      Contáctanos
-    </button>
+    <p class="text-sm text-blue-500 uppercase">Connect</p>
+    <h2 class="text-3xl font-semibold text-blue-500 mb-2">Get in Touch</h2>
+    <p class="text-gray-600 mb-8">We’re here to assist you with your inquiries.</p>
+  
+    <div class="contact-methods grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
+      <!-- Email -->
+      <div class="contact-item flex flex-col items-center text-center md:text-left">
+        <span class="material-icons text-4xl text-blue-500 mb-2">email</span>
+        <h3 class="text-xl font-semibold text-gray-900">Email</h3>
+        <p class="text-gray-600 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros.</p>
+        <a href="mailto:hello@romboworks.com" class="text-blue-500 font-medium">helloromboworks.com</a>
+      </div>
+  
+      <!-- Live chat -->
+      <div class="contact-item flex flex-col items-center text-center md:text-left">
+        <span class="material-icons text-4xl text-blue-500 mb-2">chat</span>
+        <h3 class="text-xl font-semibold text-gray-900">Live chat</h3>
+        <p class="text-gray-600 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros.</p>
+        <a href="#" class="text-blue-500 font-medium">Start new chat</a>
+      </div>
+  
+      <!-- Phone -->
+      <div class="contact-item flex flex-col items-center text-center md:text-left">
+        <span class="material-icons text-4xl text-blue-500 mb-2">phone</span>
+        <h3 class="text-xl font-semibold text-gray-900">Phone</h3>
+        <p class="text-gray-600 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros.</p>
+        <a href="tel:+15551234567" class="text-blue-500 font-medium">+1 (555) 123-4567</a>
+      </div>
+  
+      <!-- Office -->
+      <div class="contact-item flex flex-col items-center text-center md:text-left">
+        <span class="material-icons text-4xl text-blue-500 mb-2">location_on</span>
+        <h3 class="text-xl font-semibold text-gray-900">Office</h3>
+        <p class="text-gray-600 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros.</p>
+        <a href="https://maps.google.com" class="text-blue-500 font-medium" target="_blank">456 Innovation Way, Sydney NSW
+          2000 AU</a>
+      </div>
+    </div>
   </section>
+  
+<!-- Sección de Enlaces y Redes Sociales -->
+<section class="links-section bg-white py-8 text-center border-t border-gray-200">
+  <!-- Logo -->
+  <div class="flex justify-center mb-4">
+    <img src="assets/rombo-works-logo.png" alt="Rombo Works Logo" class="w-16 h-16">
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="flex justify-center space-x-8 mb-4">
+    <a href="#" class="text-gray-800 hover:text-blue-500">About Us</a>
+    <a href="#" class="text-gray-800 hover:text-blue-500">Contact Us</a>
+    <a href="#" class="text-gray-800 hover:text-blue-500">Our Services</a>
+  </nav>
+
+  <!-- Social Media Links -->
+  <div class="flex justify-center space-x-4 mb-4">
+    <a href="#" class="text-blue-500 text-2xl"><span class="material-icons">facebook</span></a>
+    <a href="#" class="text-blue-500 text-2xl"><span class="material-icons">twitter</span></a>
+    <a href="#" class="text-blue-500 text-2xl"><span class="material-icons">instagram</span></a>
+    <a href="#" class="text-blue-500 text-2xl"><span class="material-icons">linkedin</span></a>
+    <a href="#" class="text-blue-500 text-2xl"><span class="material-icons">youtube</span></a>
+  </div>
+</section>
+
+
+
+  <footer class="footer bg-white py-4 text-center border-t border-gray-200">
+    <div class="footer-legal text-gray-600 text-sm flex flex-col md:flex-row justify-center items-center space-x-2">
+      <p class="mb-0 md:mb-0">© 2024 Rombo Works. All rights reserved.</p>
+      <nav class="flex justify-center space-x-4">
+        <a href="#" class="hover:text-blue-500">Privacy Policy</a>
+        <a href="#" class="hover:text-blue-500">Terms of Use</a>
+        <a href="#" class="hover:text-blue-500">Cookie Preferences</a>
+      </nav>
+    </div>
+</footer>
+
 
 </body>
 </html>

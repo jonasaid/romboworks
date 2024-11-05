@@ -63,17 +63,84 @@ body {
 
 /* Misión y Visión */
 .mission-vision {
+    display: flex;
+    align-items: center; /* Centra verticalmente las columnas */
+    justify-content: center; /* Centra horizontalmente ambas columnas dentro del contenedor */
     padding: 40px 20px;
-    background-color: #f9f9f9;
+}
+
+.mission-vision .mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.mission-vision .vision-container {
+    max-width: 800px; /* Limita el ancho para una mejor lectura */
 }
 
 .mission-vision h2 {
-    color: #101720;
+    font-size: 2.5rem;
+    color: #007bff; /* Color azul */
+    margin: 0;
 }
 
-.mission-vision p {
-    color: #4A5568;
+.vision-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
+
+.mission-text,
+.vision-text {
+    margin-bottom: 30px;
+}
+
+.mission-text strong,
+.vision-text strong {
+    display: inline;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.mission-text p:first-of-type,
+.vision-text p:first-of-type {
+    margin-top: 0px;
+}
+
+/* Historia */
+.history {
+    display: flex;
+    align-items: center; /* Centra verticalmente las columnas */
+    justify-content: center;
+    padding: 150px 20px; /* Incrementa el padding superior e inferior para mayor separación */
+    background-color: #ffffff; /* Asegura que el fondo sea blanco */
+}
+
+.history-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.history h2 {
+    font-size: 2.5rem;
+    color: #007bff; /* Color azul */
+    margin: 0;
+}
+
+.history-content {
+    max-width: 800px; /* Limita el ancho para mejor legibilidad */
+}
+
+.history-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 
 /* Equipo */
 .team {
@@ -114,15 +181,144 @@ body {
     object-fit: cover;
 }
 
-/* Testimonios */
-.testimonials p {
+/* Estrellas de calificación */
+.stars {
+    color: #007bff; /* Azul para las estrellas */
+    font-size: 1.2rem; /* Tamaño de las estrellas */
+}
+
+/* Tipografía de los testimonios */
+.testimonial p {
     color: #2D3748;
 }
 
-/* Contacto */
-.contact button {
-    font-size: 1rem;
-    padding: 0.5rem 1.5rem;
-    transition: background-color 0.3s;
+/* Puntos de paginación */
+.pagination-dots {
+    display: flex;
+    align-items: center;
 }
 
+.pagination-dots span {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #d1d5db; /* Gris claro */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pagination-dots .active {
+    background-color: #007bff; /* Azul para el punto activo */
+}
+
+/* Botones de navegación */
+.navigation-button {
+    background-color: #f3f4f6;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px; 
+}
+
+.navigation-button:hover {
+    background-color: #e5e7eb; /* Gris más oscuro al pasar el cursor */
+}
+
+.navigation-button .material-icons {
+    font-size: 20px;
+    color: #4b5563; /* Gris oscuro para las flechas */
+}
+
+.pagination-dots > span {
+    margin: 0 5px;
+}
+
+.pagination-dots .navigation-button {
+    margin-left: 15px;
+}
+
+/* Contacto */
+.contact {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.contact-methods {
+    display: grid;
+    gap: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item h3 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.contact-item p {
+    font-size: 0.875rem;
+    color: #666666;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item a {
+    font-size: 0.875rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #0056b3;
+}
+
+.material-icons {
+    color: #007bff;
+    font-size: 2.5rem;
+}
+
+/* Estilos para la sección de enlaces y redes sociales */
+
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en una línea */
+}
+
+.footer-legal p {
+    color: #666666;
+    font-size: 0.875rem;
+    margin-right: 10px;
+}
+
+.footer-legal a {
+    color: #666666;
+    font-size: 0.875rem;
+    text-decoration: none;
+    margin-right: 10px; /* Espacio entre enlaces */
+    transition: color 0.3s;
+}
+
+.footer-legal a:hover {
+    color: #007bff;
+}
