@@ -64,8 +64,10 @@ body {
 /* Misión y Visión */
 .mission-vision {
     display: flex;
-    align-items: center; /* Centra verticalmente las columnas */
-    justify-content: center; /* Centra horizontalmente ambas columnas dentro del contenedor */
+    align-items: center;
+    /* Centra verticalmente las columnas */
+    justify-content: center;
+    /* Centra horizontalmente ambas columnas dentro del contenedor */
     padding: 40px 20px;
 }
 
@@ -73,16 +75,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
 }
 
 .mission-vision .vision-container {
-    max-width: 800px; /* Limita el ancho para una mejor lectura */
+    max-width: 800px;
+    /* Limita el ancho para una mejor lectura */
 }
 
 .mission-vision h2 {
     font-size: 2.5rem;
-    color: #007bff; /* Color azul */
+    color: #007bff;
+    /* Color azul */
     margin: 0;
 }
 
@@ -112,10 +117,13 @@ body {
 /* Historia */
 .history {
     display: flex;
-    align-items: center; /* Centra verticalmente las columnas */
+    align-items: center;
+    /* Centra verticalmente las columnas */
     justify-content: center;
-    padding: 150px 20px; /* Incrementa el padding superior e inferior para mayor separación */
-    background-color: #ffffff; /* Asegura que el fondo sea blanco */
+    padding: 150px 20px;
+    /* Incrementa el padding superior e inferior para mayor separación */
+    background-color: #ffffff;
+    /* Asegura que el fondo sea blanco */
 }
 
 .history-title {
@@ -127,12 +135,14 @@ body {
 
 .history h2 {
     font-size: 2.5rem;
-    color: #007bff; /* Color azul */
+    color: #007bff;
+    /* Color azul */
     margin: 0;
 }
 
 .history-content {
-    max-width: 800px; /* Limita el ancho para mejor legibilidad */
+    max-width: 800px;
+    /* Limita el ancho para mejor legibilidad */
 }
 
 .history-content p {
@@ -183,8 +193,10 @@ body {
 
 /* Estrellas de calificación */
 .stars {
-    color: #007bff; /* Azul para las estrellas */
-    font-size: 1.2rem; /* Tamaño de las estrellas */
+    color: #007bff;
+    /* Azul para las estrellas */
+    font-size: 1.2rem;
+    /* Tamaño de las estrellas */
 }
 
 /* Tipografía de los testimonios */
@@ -202,13 +214,15 @@ body {
     width: 10px;
     height: 10px;
     margin: 0 5px;
-    background-color: #d1d5db; /* Gris claro */
+    background-color: #d1d5db;
+    /* Gris claro */
     border-radius: 50%;
     display: inline-block;
 }
 
 .pagination-dots .active {
-    background-color: #007bff; /* Azul para el punto activo */
+    background-color: #007bff;
+    /* Azul para el punto activo */
 }
 
 /* Botones de navegación */
@@ -222,19 +236,21 @@ body {
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 
 .navigation-button:hover {
-    background-color: #e5e7eb; /* Gris más oscuro al pasar el cursor */
+    background-color: #e5e7eb;
+    /* Gris más oscuro al pasar el cursor */
 }
 
 .navigation-button .material-icons {
     font-size: 20px;
-    color: #4b5563; /* Gris oscuro para las flechas */
+    color: #4b5563;
+    /* Gris oscuro para las flechas */
 }
 
-.pagination-dots > span {
+.pagination-dots>span {
     margin: 0 5px;
 }
 
@@ -286,23 +302,82 @@ body {
     font-size: 2.5rem;
 }
 
-/* Estilos para la sección de enlaces y redes sociales */
+/* Contenedor general de las redes sociales*/
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+
+}
+
+/* Logo */
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    height: 200px;
+    /* Tamaño más grande */
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    /* Tamaño del texto */
+    font-weight: 500;
+    color: #4a4a4a;
+    transition: color 0.3s;
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 16px;
+    color: #007bff;
+}
+
+.social-icon {
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
 
 
 /* Footer */
 .footer {
     background-color: #ffffff;
     border-top: 1px solid #e5e7eb;
-    padding: 1rem 0;
+    padding: 2rem 0;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    margin-bottom: 32px;
 }
 
 .footer-legal {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que los enlaces se ajusten en una línea */
+    flex-wrap: wrap;
 }
 
 .footer-legal p {
@@ -315,7 +390,7 @@ body {
     color: #666666;
     font-size: 0.875rem;
     text-decoration: none;
-    margin-right: 10px; /* Espacio entre enlaces */
+    margin-right: 10px;
     transition: color 0.3s;
 }
 
