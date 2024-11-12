@@ -1,0 +1,221 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #101720;
+}
+
+.container {
+  padding-left: 70px;
+  width: 100%;
+}
+
+/* Introductory Section */
+.intro-section {
+  padding: 20px 0px;
+  color: #101720;
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  max-width: 800px;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00A0DE;
+}
+
+.intro-description {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0;
+  color: #101720;
+}
+
+/* Banking Experience Section */
+.banking-experience {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+  max-width: 100%;
+  height: 1050px; /* Altura total de la sección */
+  padding: 5px 0; /* Padding arriba y abajo */
+}
+
+/* Contenido de texto */
+.banking-content {
+  max-width: 45%;
+}
+
+.banking-content h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #101720;
+  margin: 0 0 10px;
+}
+
+.banking-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00A0DE;
+  margin: 0 0 20px;
+}
+
+.banking-description {
+  font-size: 1rem;
+  color: #101720;
+  margin: 0 0 30px;
+  line-height: 1.7;
+}
+
+.app-button {
+  font-size: 1rem;
+  color: #101720;
+  background: transparent;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-button:hover {
+  background-color: #00A0DE;
+  color: #fff;
+}
+
+/* Contenedor de imagen */
+.image-placeholder {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+}
+
+/* Imagen */
+.image-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Services Overview Section */
+.services-overview {
+  padding: 40px 0px;
+  text-align: left;
+  max-width: 800px;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  color: #00A0DE;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Services List Section */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Aumentamos el espacio entre tarjetas */
+  padding: 40px 20px;
+  background-color: #ffffff;
+  justify-content: flex-start;
+}
+
+.service-item {
+  background-color: #f4f4f4;
+  padding: 30px; /* Incremento del padding interno de la tarjeta */
+  border-radius: 12px;
+  width: 375px; /* Aumentamos el ancho de la tarjeta */
+  text-align: left;
+  transition: transform 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-item:hover {
+  transform: scale(1.07);
+}
+
+.service-icon {
+  font-size: 50px; /* Aumentamos el tamaño del ícono */
+  color: #00A0DE;
+  margin-bottom: 15px; /* Incremento del margen inferior */
+}
+
+.service-title {
+  font-size: 1.5rem; /* Aumentamos el tamaño de la fuente */
+  color: #101720;
+  font-weight: 700;
+  margin: 15px 0 8px; /* Ajustamos los márgenes */
+}
+
+.service-description {
+  font-size: 1.1rem; /* Aumentamos el tamaño de la fuente de la descripción */
+  color: #555;
+  line-height: 1.8; /* Mayor espaciado entre líneas para mejor lectura */
+  margin: 0 0 25px;
+}
+
+.learn-more {
+  color: #00A0DE;
+  font-size: 1rem; /* Aumentamos ligeramente el tamaño de la fuente */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 50px;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-content p {
+  color: #666666;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #666666;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00A0DE;
+}
