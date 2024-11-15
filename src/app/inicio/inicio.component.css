@@ -4,6 +4,54 @@
   padding: 0;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: block;
+  width: 300px; /* Ajusta el tamaño de la tarjeta si es necesario */
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 15px;
+  background-color: #fff;
+}
+
+.card-date {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.card-title {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card-description {
+  font-size: 1em;
+  color: #555;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
