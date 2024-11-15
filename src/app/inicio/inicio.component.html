@@ -23,22 +23,33 @@
                 digital transformation.
             </p>
             <div class="hero-buttons">
-                <button class="btn btn-primary">Learn More</button>
-                <button class="btn btn-secondary">Sign Up</button>
+                <button mat-button class="btn btn-primary" (click)="irAboutUs()">
+                    <span>Learn More</span>
+                </button>
             </div>
         </div>
         <div class="hero-images">
-            <div class="grid">
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Columna izquierda (una imagen grande) -->
+                <div class="grid-item col-span-1 row-span-4 bg-gray-200 flex items-center justify-center">
+                    <img src="./assets/rombo-works-logo.png" alt="Main Image" class="w-full h-full object-cover">
+                </div>
+        
+                <!-- Columna derecha (cuatro imágenes más pequeñas) -->
+                <div class="grid-item bg-gray-300 flex items-center justify-center">
+                    <img src="./assets/rombo-works-logo.png" alt="Image 1" class="w-full h-full object-cover">
+                </div>
+                <div class="grid-item bg-gray-300 flex items-center justify-center">
+                    <img src="./assets/rombo-works-logo.png" alt="Image 2" class="w-full h-full object-cover">
+                </div>
+                <div class="grid-item bg-gray-300 flex items-center justify-center">
+                    <img src="./assets/rombo-works-logo.png" alt="Image 3" class="w-full h-full object-cover">
+                </div>
+                <div class="grid-item bg-gray-300 flex items-center justify-center">
+                    <img src="./assets/rombo-works-logo.png" alt="Image 4" class="w-full h-full object-cover">
+                </div>
             </div>
-        </div>
+        </div>        
     </section>
 
     <section class="services-section">
@@ -95,23 +106,38 @@
     </section>
 
     <section class="hero-potential">
-        <div class="hero-image">
-            <div class="image-placeholder"></div>
-        </div>
         <div class="hero-text">
             <p class="hero-tagline">Innovate</p>
             <h2 class="hero-title">Unlock Your Potential with Rombo Works</h2>
-            <p class="hero-description">
-                Partnering with Rombo Works means embracing continuous innovation that drives your financial operations
-                forward.
-                Our solutions enhance efficiency, elevate customer experiences, and ensure top-tier security for your
-                business.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary">Learn More</button>
-                <button class="btn btn-secondary">Sign Up <span class="material-icons">arrow_forward</span></button>
-            </div>
-        </div>
+        </div>   
+        <div class="card-container">
+            <a href="article1-link.html" class="card">
+              <img src="./assets/rombo-works-logo.png" alt="Article 1 Image" class="card-image">
+              <div class="card-content">
+                <p class="card-date">2024-11-07</p>
+                <h3 class="card-title">Titulo del Artículo número 1</h3>
+                <p class="card-description">Explore how Rombo Work's newest platform revolutionizes AI agent creation.</p>
+              </div>
+            </a>
+          
+            <a href="article2-link.html" class="card">
+              <img src="./assets/rombo-works-logo.png" alt="Article 2 Image" class="card-image">
+              <div class="card-content">
+                <p class="card-date">2024-10-12</p>
+                <h3 class="card-title">Titulo del Artículo número 2</h3>
+                <p class="card-description">Discover how Rombo Work's is transforming financial services in Nigeria.</p>
+              </div>
+            </a>
+          
+            <a href="article3-link.html" class="card">
+              <img src="./assets/rombo-works-logo.png" alt="Article 3 Image" class="card-image">
+              <div class="card-content">
+                <p class="card-date">2024-05-06</p>
+                <h3 class="card-title">Titulo del Artículo número 3</h3>
+                <p class="card-description">See highlights from Rombo Work's global launch and new products.</p>
+              </div>
+            </a>
+          </div>
     </section>
 
     <section class="feedback-section">
