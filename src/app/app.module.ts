@@ -15,6 +15,9 @@ import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.componen
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { Articulo1Component } from './inicio/articulo1/articulo1.component';
+import { Articulo2Component } from './inicio/articulo2/articulo2.component';
+import { Articulo3Component } from './inicio/articulo3/articulo3.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { MatIconModule } from '@angular/material/icon';
     InicioComponent,
     ServiciosComponent,
     FaqsComponent,
-    SobreNosotrosComponent
+    SobreNosotrosComponent,
+    Articulo1Component,
+    Articulo2Component,
+    Articulo3Component
   ],
   imports: [
     BrowserModule,
