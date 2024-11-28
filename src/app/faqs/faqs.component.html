@@ -14,29 +14,28 @@
 <body class="bg-gray-100 font-roboto text-gray-800">
 
   <section class="faqs-intro bg-white p-8">
-    <h2 class="text-3xl font-semibold text-blue-500 mb-2">Get in Touch</h2>
-    <p class="text-gray-600 max-w-md">
-      We’re here to assist you with inquiries, support, or potential collaborations. Reach out today!
-    </p>
+    <h2 class="hero-title">Contáctanos!</h2>
+    <p class="text-gray-600 max-w-md">Estamos aquí para apoyarte, contestar tus dudas, o para posibles colaboraciones.
+      Reach out today!</p>
   </section>
 
   <!-- Sección de Cuestionario -->
   <section class="questionnaire bg-white p-8">
-    <h2 class="text-3xl font-semibold text-blue-500 mb-4">Cuestionario</h2>
+    <h2 class="hero-title">Cuestionario</h2>
     <p class="text-gray-600 max-w-md mb-8">Completa el siguiente formulario para contactarnos.</p>
 
-    <form (ngSubmit)="submitForm()" class="questionnaire-form max-w-lg">
+    <form class="questionnaire-form max-w-lg">
       <label class="block text-gray-700 text-sm font-semibold mb-2" for="name">Nombre</label>
-      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required
-        class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Escribe tu nombre" />
+      <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded mb-4"
+        placeholder="Escribe tu nombre">
 
       <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">Correo Electrónico</label>
-      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required
-        class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Escribe tu correo electrónico" />
+      <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded mb-4"
+        placeholder="Escribe tu correo electrónico">
 
       <label class="block text-gray-700 text-sm font-semibold mb-2" for="feedback">Mensaje</label>
-      <textarea id="feedback" name="feedback" [(ngModel)]="formData.feedback" required rows="4"
-        class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Escribe tu mensaje"></textarea>
+      <textarea id="feedback" name="feedback" rows="4" class="w-full p-2 border border-gray-300 rounded mb-4"
+        placeholder="Escribe tu mensaje"></textarea>
 
       <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Enviar</button>
     </form>
@@ -45,8 +44,8 @@
   <!-- Sección de Contacto -->
   <section class="contact bg-white p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
     <div class="contact-info space-y-6">
-      <h2 class="text-3xl font-semibold text-blue-500">Contact us</h2>
-      <p class="text-gray-600">Find our offices and connect with us easily.</p>
+      <h2 class="hero-title">Contact us</h2>
+      <p class="text-gray-600">Encuentra nuestras oficinas y conecta facilmente con nosotros.</p>
 
       <div class="contact-item flex items-start space-x-4">
         <span class="material-icons text-blue-500 text-2xl">email</span>
@@ -80,13 +79,14 @@
       <span class="material-icons text-gray-500 text-6xl">location_on</span>
     </div>
   </section>
+
   <!-- Sección de FAQs con diseño de dos columnas -->
   <section class="faqs bg-white p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
     <!-- Columna izquierda -->
     <div class="faqs-intro">
-      <h2 class="text-3xl font-semibold text-blue-500 mb-4">FAQs</h2>
-      <p class="text-gray-600 max-w-md mb-8">Find answers to common questions about our innovative financial software
-        solutions.</p>
+      <h2 class="hero-title">FAQs</h2>
+      <p class="text-gray-600 max-w-md mb-8">Encuentra las repuestas a preguntas frecuentes sobre nuestas soluciones de software 
+        financiero innovativas.</p>
       <button class="border border-gray-300 text-blue-500 py-2 px-4 rounded hover:bg-blue-100">Contact</button>
     </div>
 
@@ -94,7 +94,7 @@
     <div class="faqs-questions space-y-4">
       <details class="faq-item border-b border-gray-300 pb-4">
         <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>What is RegTech?</span>
+          <span>¿Qué es RegTech?</span>
           <span class="material-icons text-blue-500">expand_more</span>
         </summary>
         <p class="faq-answer text-gray-600 mt-2">RegTech, or regulatory technology, refers to the use of technology to
@@ -104,7 +104,7 @@
 
       <details class="faq-item border-b border-gray-300 pb-4">
         <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>How does AI help?</span>
+          <span>¿Cómo es que la IA puede ayudarnos?</span>
           <span class="material-icons text-blue-500">expand_more</span>
         </summary>
         <p class="faq-answer text-gray-600 mt-2">Artificial Intelligence enhances financial services by providing
@@ -114,7 +114,7 @@
 
       <details class="faq-item border-b border-gray-300 pb-4">
         <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>What are digital banks?</span>
+          <span>¿Qué es la banca digital?</span>
           <span class="material-icons text-blue-500">expand_more</span>
         </summary>
         <p class="faq-answer text-gray-600 mt-2">Digital banks operate exclusively online without physical branches.
@@ -124,7 +124,7 @@
 
       <details class="faq-item border-b border-gray-300 pb-4">
         <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>What is big data?</span>
+          <span>¿Qué es big data?</span>
           <span class="material-icons text-blue-500">expand_more</span>
         </summary>
         <p class="faq-answer text-gray-600 mt-2">Big data refers to the vast volumes of data generated every second.
@@ -134,7 +134,7 @@
 
       <details class="faq-item border-b border-gray-300 pb-4">
         <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>How secure is it?</span>
+          <span>¿Que tan seguro es?</span>
           <span class="material-icons text-blue-500">expand_more</span>
         </summary>
         <p class="faq-answer text-gray-600 mt-2">Our solutions prioritize top-tier security measures to protect
