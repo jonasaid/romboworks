@@ -16,45 +16,12 @@
     <!-- Sección Principal -->
     <section class="hero-section">
         <div class="hero-content">
-          <h1 class="hero-title">Transforming Finance with Innovative Technology Solutions</h1>
-          <p class="hero-description">
-            At Rombo Works, we are dedicated to revolutionizing the financial sector through cutting-edge software
-            solutions.
-            Our mission is to empower businesses with secure, efficient, and scalable technologies that drive
-            digital transformation.
-          </p>
-          <div class="hero-buttons">
-            <button mat-button class="btn btn-primary" (click)="irAboutUs()">
-              <span>Learn More</span>
-            </button>
-          </div>
+          <p class="hero-tagline">Calma tu mente y transforma tu vida</p>
+          <h2 class="hero-title">Conecta con tu esencia a través del yoga y la meditación, en cualquier momento y lugar.</h2>
+          <a href="#prueba-gratis" class="hero-button">Comienza tu prueba gratis</a>
         </div>
-        <div class="hero-images">
-          <div class="grid">
-            <div class="grid-item">
-              <img src="./assets/1.webp" alt="Image 1" class="object-cover">
-            </div>
-            <div class="grid-item">
-              <img src="./assets/2.webp" alt="Image 2" class="object-cover">
-            </div>
-            <div class="grid-item">
-              <img src="./assets/3.webp" alt="Image 3" class="object-cover">
-            </div>
-            <div class="grid-item">
-              <img src="./assets/4.jpeg" alt="Image 4" class="object-cover">
-            </div>
-            <div class="grid-item">
-              <img src="./assets/5.jpeg" alt="Image 5" class="object-cover">
-            </div>
-            <div class="grid-item">
-              <img src="./assets/6.jpeg" alt="Image 6" class="object-cover">
-            </div>
-          </div>
-        </div>
-      </section>
-      
-    
-
+    </section>
+  
     <section class="services-section">
         <div class="services-header">
             <p class="services-tagline">Innovate</p>
@@ -114,7 +81,7 @@
             <h2 class="hero-title">Unlock Your Potential with Rombo Works</h2>
         </div>   
         <div class="card-container">
-            <a href="article1-link.html" class="card">
+            <a [routerLink]="'/articulo1'" class="card">
               <img src="./assets/rombo-works-logo.png" alt="Article 1 Image" class="card-image">
               <div class="card-content">
                 <p class="card-date">2024-11-07</p>
@@ -123,7 +90,7 @@
               </div>
             </a>
           
-            <a href="article2-link.html" class="card">
+            <a [routerLink]="'/articulo2'" class="card">
               <img src="./assets/rombo-works-logo.png" alt="Article 2 Image" class="card-image">
               <div class="card-content">
                 <p class="card-date">2024-10-12</p>
@@ -132,7 +99,7 @@
               </div>
             </a>
           
-            <a href="article3-link.html" class="card">
+            <a [routerLink]="'/articulo3'" class="card">
               <img src="./assets/rombo-works-logo.png" alt="Article 3 Image" class="card-image">
               <div class="card-content">
                 <p class="card-date">2024-05-06</p>
