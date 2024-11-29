@@ -1,0 +1,240 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .article-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .article-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .article-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0070c9;
+    margin-bottom: 10px;
+  }
+  
+  .article-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .article-date {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .article-intro {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .article-content {
+    margin-bottom: 20px;
+  }
+  
+  .article-content p {
+    margin-bottom: 15px;
+  }
+  
+  .secondary-image {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .secondary-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .image-caption {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    display: block;
+    width: 300px; /* Ajusta el tamaño de la tarjeta si es necesario */
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .card-date {
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  .card-title {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .card-description {
+    font-size: 1em;
+    color: #555;
+  }
+
+  .latest-releases {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .release-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+  
+  }
+  
+  /* Logo */
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    height: 200px;
+    /* Tamaño más grande */
+  }
+  
+  /* Menú de navegación */
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    gap: 32px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    /* Tamaño del texto */
+    font-weight: 500;
+    color: #4a4a4a;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* Redes sociales */
+  .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 16px;
+    color: #007bff;
+  }
+  
+  .social-icon {
+    font-size: 20px;
+    transition: opacity 0.3s;
+  }
+  
+  .social-icon:hover {
+    opacity: 0.7;
+  }
+  
+  
+  /* Footer */
+  .footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-legal p {
+    color: #666666;
+    font-size: 0.875rem;
+    margin-right: 10px;
+  }
+  
+  .footer-legal a {
+    color: #666666;
+    font-size: 0.875rem;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  .footer-legal a:hover {
+    color: #007bff;
+  }
