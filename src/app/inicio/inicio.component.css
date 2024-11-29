@@ -58,42 +58,53 @@ body {
   color: #333;
 }
 
-/* Hero Section */
 .hero-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-  padding: 0;
-  gap: 0;
-  margin: 0;
-  background-color: #fff;
+  position: relative;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background: url('./assets/Designer.jpeg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Hace que todo el texto dentro sea blanco */
+  text-align: center;
+  padding: 0 20px;
 }
 
+/* Contenido del héroe */
 .hero-content {
-  padding: 4rem 2rem 2rem 6rem; /* top, right, bottom, left */
-  max-width: 600px;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Alinea el contenido al inicio verticalmente */
+  max-width: 800px;
+  color: #fff; /* Asegura que los textos dentro sean blancos */
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #fff; /* Texto blanco */
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #007bff;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  color: #fff; /* Texto blanco */
 }
 
-.hero-description {
+.hero-button {
+  display: inline-block;
+  padding: 15px 30px;
   font-size: 1rem;
-  color: #666;
-  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #00584a; /* Verde oscuro */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
+.hero-button:hover {
+  background-color: #004037; /* Verde más oscuro */
 }
 
 .btn-primary {
@@ -197,8 +208,6 @@ body {
     object-fit: cover; /* Asegura que la imagen cubra el contenedor */
   }
 }
-
-
 
 .services-section {
   text-align: center;
