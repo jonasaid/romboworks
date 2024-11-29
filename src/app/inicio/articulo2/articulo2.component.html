@@ -1,1 +1,130 @@
-<p>articulo2 works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Example</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="articulo2.component.css">
+</head>
+<body>
+  <div class="article-container">
+    <!-- Título principal -->
+    <header class="article-header">
+      <h1 class="article-title">
+        Dyna.AI Unveils Agent Studio: A Powerful AI Agent Builder Platform at Singapore Fintech Festival
+      </h1>
+      <p class="article-subtitle">
+        Dyna.AI Agent Studio, ModelGPT, AgentGPT, and FS (Financial Services Industry Suite) were products exhibited at the booth.
+      </p>
+      <p class="article-date">Singapore, 27 November, 2024</p>
+    </header>
+
+    <!-- Imagen principal -->
+    <div class="main-image">
+      <img src="./assets/2.webp" alt="Presentation at Singapore Fintech Festival">
+    </div>
+
+    <!-- Introducción -->
+    <section class="article-intro">
+      <p>
+        Agent Studio is a groundbreaking AI agent builder platform built upon Dyna.AI’s proprietary large language model (LLM). 
+        The platform enables organizations to quickly and efficiently create policy-driven, AI-powered conversational agents 
+        capable of handling various complex tasks. It offers solutions for customer support, financial services, and more, 
+        transforming the way businesses operate while maintaining regulatory compliance.
+      </p>
+    </section>
+
+    <!-- Contenido detallado -->
+    <section class="article-content">
+      <p>
+        Agent Studio addresses specific pain points for industry leaders by offering a flexible solution that includes APIs, 
+        a no-code platform, and an intuitive UI for deployment. With the Financial Services Industry Suite (FS), it adds layers 
+        of security and compliance, ensuring seamless integration with existing business workflows.
+      </p>
+      <p>
+        Cynthia Sari, the Head of Business Development at Dyna.AI, commented, “While there is certainly a lot of interest 
+        in AI adoption within Singapore’s financial sector, many organizations still face challenges in creating AI-driven 
+        solutions that are both scalable and compliant.”
+      </p>
+    </section>
+
+    <!-- Imagen secundaria con descripción -->
+    <div class="secondary-image">
+      <img src="./assets/2.webp" alt="Cynthia Sari, Head of Business Development">
+      <p class="image-caption">Cynthia Sari, Head of Business Development, Dyna.AI</p>
+    </div>
+  </div>
+
+  <section class="latest-releases">
+    <h2 class="section-title">Latest Release</h2>
+    <div class="release-cards">
+      <!-- Card 1 -->
+      <div class="card-container">
+        <a [routerLink]="'/articulo1'" class="card">
+          <img src="./assets/rombo-works-logo.png" alt="Article 1 Image" class="card-image">
+          <div class="card-content">
+            <p class="card-date">2024-11-07</p>
+            <h3 class="card-title">Titulo del Artículo número 1</h3>
+            <p class="card-description">Explore how Rombo Work's newest platform revolutionizes AI agent creation.</p>
+          </div>
+        </a>
+      
+        <a [routerLink]="'/articulo2'" class="card">
+          <img src="./assets/rombo-works-logo.png" alt="Article 2 Image" class="card-image">
+          <div class="card-content">
+            <p class="card-date">2024-10-12</p>
+            <h3 class="card-title">Titulo del Artículo número 2</h3>
+            <p class="card-description">Discover how Rombo Work's is transforming financial services in Nigeria.</p>
+          </div>
+        </a>
+      
+        <a [routerLink]="'/articulo3'" class="card">
+          <img src="./assets/rombo-works-logo.png" alt="Article 3 Image" class="card-image">
+          <div class="card-content">
+            <p class="card-date">2024-05-06</p>
+            <h3 class="card-title">Titulo del Artículo número 3</h3>
+            <p class="card-description">See highlights from Rombo Work's global launch and new products.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <header class="header-container">
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="./assets/rombo-works-logo.png" alt="Rombo Works Logo" class="logo">
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="nav-menu">
+        <a href="#" class="nav-link">About Us</a>
+        <a href="#" class="nav-link">Contact Us</a>
+        <a href="#" class="nav-link">Our Services</a>
+    </nav>
+
+    <!-- Redes sociales -->
+    <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+</header>
+
+<footer class="footer bg-white py-4 text-center border-t border-gray-200">
+    <div class="footer-legal text-gray-600 text-sm flex flex-col md:flex-row justify-center items-center space-x-2">
+        <p class="mb-0 md:mb-0">© 2024 Rombo Works. All rights reserved.</p>
+        <nav class="flex justify-center space-x-4">
+            <a href="#" class="hover:text-blue-500">Privacy Policy</a>
+            <a href="#" class="hover:text-blue-500">Terms of Use</a>
+            <a href="#" class="hover:text-blue-500">Cookie Preferences</a>
+        </nav>
+    </div>
+</footer>
+  
+</body>
+</html>
