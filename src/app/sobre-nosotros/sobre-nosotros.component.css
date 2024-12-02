@@ -8,7 +8,7 @@ body {
     padding: 0;
     line-height: 1.6;
     font-size: 16px;
-    color: #101720;
+    color: #007bff;
 }
 
 /* Header */
@@ -45,13 +45,13 @@ body {
 /* Sección Introductoria */
 .intro {
     padding: 80px 20px;
-    color: #101720;
+    color: #007bff;
 }
 
 .intro h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #101720;
+    color: #007bff;
 }
 
 .intro p {
@@ -161,7 +161,7 @@ body {
 .team h2 {
     font-size: 2.25rem;
     margin-bottom: 20px;
-    color: #101720;
+    color: #007bff;
 }
 
 .team-members {
