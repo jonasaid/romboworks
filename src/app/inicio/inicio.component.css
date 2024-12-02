@@ -58,29 +58,57 @@ body {
   color: #333;
 }
 
+.era-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.era-tagline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Sección principal */
 .hero-section {
   position: relative;
   height: 100vh; /* Ocupa toda la altura de la ventana */
-  background: url('./assets/Designer.jpeg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff; /* Hace que todo el texto dentro sea blanco */
   text-align: center;
-  padding: 0 20px;
+  overflow: hidden; /* Evita que el contenido se salga de los límites */
+}
+
+/* Imagen de fondo difuminada */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/Designer.jpeg') no-repeat center center/cover;
+  filter: blur(4.5px); /* Aplica el efecto de difuminado */
+  z-index: 1; /* Coloca el fondo detrás del contenido */
 }
 
 /* Contenido del héroe */
 .hero-content {
-  max-width: 800px;
-  color: #fff; /* Asegura que los textos dentro sean blancos */
+  position: relative;
+  z-index: 2; /* Coloca el contenido por encima del fondo */
+  color: #00142e;
 }
 
 .hero-tagline {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 20px;
-  color: #fff; /* Texto blanco */
+  color: #00142e;
 }
 
 .hero-title {
@@ -88,7 +116,7 @@ body {
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 30px;
-  color: #fff; /* Texto blanco */
+  color: #00142e;
 }
 
 .hero-button {
@@ -97,14 +125,14 @@ body {
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background-color: #00584a; /* Verde oscuro */
+  background-color: #00142e; 
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .hero-button:hover {
-  background-color: #004037; /* Verde más oscuro */
+  background-color: #79c1e2; 
 }
 
 .btn-primary {
@@ -119,94 +147,6 @@ body {
 
 .btn-primary:hover {
   background-color: #333;
-}
-
-/* Grid Section */
-.hero-images .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  grid-auto-rows: 75px; /* Altura base de las filas */
-  gap: 10px; /* Espacio uniforme entre imágenes */
-  /* grid-auto-flow: dense; */ /* Eliminado para evitar comportamiento inesperado */
-}
-
-.grid-item {
-  position: relative;
-  overflow: hidden;
-  margin: 0; /* Elimina márgenes laterales */
-}
-
-.grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px; /* Bordes redondeados */
-}
-
-/* Ajuste del primer grid-item */
-.grid-item:first-child {
-  grid-row: span 1; /* Ocupa una fila (75px) */
-  height: 75px; /* Altura de 75px */
-}
-
-.grid-item:first-child img {
-  clip-path: inset(50% 0 0 0); /* Recorta la mitad inferior de la imagen */
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
-}
-
-/* Ajuste de los demás grid-items */
-.grid-item:not(:first-child) {
-  grid-row: span 2; /* Ocupa dos filas (150px) */
-  height: 150px; /* Altura de 150px */
-}
-
-/* Alineación de la última imagen (opcional) */
-.grid-item:last-child img {
-  clip-path: inset(0 0 50% 0); /* Recorte desde la mitad hacia arriba */
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor */
-}
-
-/* Eliminar márgenes superiores e inferiores que causaban espacios */
-.grid-item:nth-child(odd),
-.grid-item:nth-child(even) {
-  margin: 0; /* Elimina todos los márgenes */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-section {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-images .grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 75px; /* Altura base de las filas */
-    gap: 10px; /* Espacio entre imágenes en diseño responsivo */
-    /* grid-auto-flow: dense; */ /* Mantener eliminado */
-  }
-
-  /* Ajustes para el primer grid-item en diseño responsivo */
-  .grid-item:first-child {
-    grid-row: span 1; /* Ocupa una fila */
-    height: 75px; /* Altura de 75px */
-  }
-
-  .grid-item:first-child img {
-    clip-path: inset(50% 0 0 0); /* Mantiene el recorte */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
-  }
-
-  /* Ajuste de los demás grid-items en diseño responsivo */
-  .grid-item:not(:first-child) {
-    grid-row: span 2; /* Ocupa dos filas (150px) */
-    height: 150px; /* Altura de 150px */
-  }
-
-  /* Alineación de la última imagen en diseño responsivo (opcional) */
-  .grid-item:last-child img {
-    clip-path: inset(0 0 50% 0); /* Mantiene el recorte */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
-  }
 }
 
 .services-section {
@@ -352,20 +292,6 @@ body {
 
 .hero-text {
   text-align: left;
-}
-
-.hero-tagline {
-  font-size: 1rem;
-  color: #007bff;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
-.hero-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #007bff;
-  margin-bottom: 1rem;
 }
 
 .hero-description {
