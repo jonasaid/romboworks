@@ -16,9 +16,9 @@
     <!-- Sección Principal -->
     <section class="hero-section">
         <div class="hero-content">
-          <p class="hero-tagline">Calma tu mente y transforma tu vida</p>
+          <h3 class="hero-tagline">Calma tu mente y transforma tu vida</h3>
           <h2 class="hero-title">Conecta con tu esencia a través del yoga y la meditación, en cualquier momento y lugar.</h2>
-          <a href="#prueba-gratis" class="hero-button">Comienza tu prueba gratis</a>
+          <button mat-button class="hero-button" (click)="irAboutUs()">Conocenos!</button>
         </div>
     </section>
   
@@ -77,8 +77,8 @@
 
     <section class="hero-potential">
         <div class="hero-text">
-            <p class="hero-tagline">Innovate</p>
-            <h2 class="hero-title">Unlock Your Potential with Rombo Works</h2>
+            <p class="era-tagline">Innovate</p>
+            <h2 class="era-title">Unlock Your Potential with Rombo Works</h2>
         </div>   
         <div class="card-container">
             <a [routerLink]="'/articulo1'" class="card">
