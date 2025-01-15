@@ -1,3 +1,4 @@
+/* Reset general */
 * {
     box-sizing: border-box;
 }
@@ -11,7 +12,7 @@ body {
     color: #007bff;
 }
 
-/* Header */
+/* HEADER */
 .header {
     background: #fff;
     padding: 10px 20px;
@@ -42,267 +43,7 @@ body {
     color: #00a0de;
 }
 
-/* Sección Introductoria */
-.intro {
-    padding: 80px 20px;
-    color: #007bff;
-}
-
-.intro h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #007bff;
-}
-
-.intro p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #101720;
-}
-
-/* Misión y Visión */
-.mission-vision {
-    display: flex;
-    align-items: center;
-    /* Centra verticalmente las columnas */
-    justify-content: center;
-    /* Centra horizontalmente ambas columnas dentro del contenedor */
-    padding: 40px 20px;
-}
-
-.mission-vision .mission {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    /* Alinea el texto a la izquierda */
-}
-
-.mission-vision .vision-container {
-    max-width: 800px;
-    /* Limita el ancho para una mejor lectura */
-}
-
-.mission-vision h2 {
-    font-size: 2.5rem;
-    color: #007bff;
-    /* Color azul */
-    margin: 0;
-}
-
-.vision-container p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.mission-text,
-.vision-text {
-    margin-bottom: 30px;
-}
-
-.mission-text strong,
-.vision-text strong {
-    display: inline;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
-
-.mission-text p:first-of-type,
-.vision-text p:first-of-type {
-    margin-top: 0px;
-}
-
-/* Historia */
-.history {
-    display: flex;
-    align-items: center;
-    /* Centra verticalmente las columnas */
-    justify-content: center;
-    padding: 150px 20px;
-    /* Incrementa el padding superior e inferior para mayor separación */
-    background-color: #ffffff;
-    /* Asegura que el fondo sea blanco */
-}
-
-.history-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.history h2 {
-    font-size: 2.5rem;
-    color: #007bff;
-    /* Color azul */
-    margin: 0;
-}
-
-.history-content {
-    max-width: 800px;
-    /* Limita el ancho para mejor legibilidad */
-}
-
-.history-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-
-/* Equipo */
-.team {
-    padding: 60px 20px;
-    background-color: #fff;
-}
-
-.team h2 {
-    font-size: 2.25rem;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.member {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 200px;
-    transition: transform 0.3s;
-}
-
-.member:hover {
-    transform: scale(1.05);
-}
-
-.member img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
-/* Estrellas de calificación */
-.stars {
-    color: #007bff;
-    /* Azul para las estrellas */
-    font-size: 1.2rem;
-    /* Tamaño de las estrellas */
-}
-
-/* Tipografía de los testimonios */
-.testimonial p {
-    color: #2D3748;
-}
-
-/* Puntos de paginación */
-.pagination-dots {
-    display: flex;
-    align-items: center;
-}
-
-.pagination-dots span {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #d1d5db;
-    /* Gris claro */
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.pagination-dots .active {
-    background-color: #007bff;
-    /* Azul para el punto activo */
-}
-
-/* Botones de navegación */
-.navigation-button {
-    background-color: #f3f4f6;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-left: 10px;
-}
-
-.navigation-button:hover {
-    background-color: #e5e7eb;
-    /* Gris más oscuro al pasar el cursor */
-}
-
-.navigation-button .material-icons {
-    font-size: 20px;
-    color: #4b5563;
-    /* Gris oscuro para las flechas */
-}
-
-.pagination-dots>span {
-    margin: 0 5px;
-}
-
-.pagination-dots .navigation-button {
-    margin-left: 15px;
-}
-
-/* Contacto */
-.contact {
-    padding: 2rem;
-    background-color: #ffffff;
-}
-
-.contact-methods {
-    display: grid;
-    gap: 2rem;
-}
-
-.contact-item {
-    text-align: center;
-}
-
-.contact-item h3 {
-    margin-top: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #333333;
-}
-
-.contact-item p {
-    font-size: 0.875rem;
-    color: #666666;
-    margin-bottom: 0.5rem;
-}
-
-.contact-item a {
-    font-size: 0.875rem;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-item a:hover {
-    color: #0056b3;
-}
-
-.material-icons {
-    color: #007bff;
-    font-size: 2.5rem;
-}
-
-/* Contenedor general de las redes sociales*/
+/* Redes sociales del Header */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -310,20 +51,18 @@ body {
     padding: 16px 32px;
     background-color: #ffffff;
     margin-bottom: 50px;
-
 }
 
-/* Logo */
 .logo-container {
     flex: 1;
 }
 
 .logo {
     height: 200px;
-    /* Tamaño más grande */
+    max-width: 100%; /* Evita deformaciones */
+    object-fit: contain;
 }
 
-/* Menú de navegación */
 .nav-menu {
     display: flex;
     justify-content: center;
@@ -334,7 +73,6 @@ body {
 .nav-link {
     text-decoration: none;
     font-size: 18px;
-    /* Tamaño del texto */
     font-weight: 500;
     color: #4a4a4a;
     transition: color 0.3s;
@@ -345,7 +83,6 @@ body {
     color: #007bff;
 }
 
-/* Redes sociales */
 .social-icons {
     display: flex;
     justify-content: flex-end;
@@ -363,8 +100,66 @@ body {
     opacity: 0.7;
 }
 
+/* RESPONSIVIDAD DEL HEADER */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
 
-/* Footer */
+    .logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .social-icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+    }
+}
+
+/* FOOTER */
 .footer {
     background-color: #ffffff;
     border-top: 1px solid #e5e7eb;
@@ -396,4 +191,59 @@ body {
 
 .footer-legal a:hover {
     color: #007bff;
+}
+
+/* SECCIÓN DEL EQUIPO */
+.team {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.member {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.member h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.member p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.member p.text-blue-500 {
+    color: #007bff;
+    font-weight: bold;
 }
