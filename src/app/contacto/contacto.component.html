@@ -12,21 +12,30 @@
       <p class="text-gray-600 text-base mb-6">
         Estamos aquí para resolver tus dudas y apoyarte en lo que necesites.
       </p>
-      <form class="grid grid-cols-1 gap-4">
+      <form class="grid grid-cols-1 gap-4" (ngSubmit)="submitForm()">
         <input
           type="text"
           placeholder="Nombre"
           class="p-3 border border-gray-300 rounded-lg"
+          [(ngModel)]="formData.name"
+          name="name"
+          required
         />
         <input
           type="email"
           placeholder="Correo Electrónico"
           class="p-3 border border-gray-300 rounded-lg"
+          [(ngModel)]="formData.email"
+          name="email"
+          required
         />
         <textarea
           rows="4"
           placeholder="Mensaje"
           class="p-3 border border-gray-300 rounded-lg"
+          [(ngModel)]="formData.feedback"
+          name="feedback"
+          required
         ></textarea>
         <button
           type="submit"
@@ -35,6 +44,7 @@
           Enviar
         </button>
       </form>
+      
     </div>
   </div>
   <!-- Sección del mapa y datos de contacto -->
