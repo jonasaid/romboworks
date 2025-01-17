@@ -15,9 +15,13 @@ import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.componen
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav'; // Importación añadida
+import { MatListModule } from '@angular/material/list'; // Importación añadida
+
 import { Articulo1Component } from './inicio/articulo1/articulo1.component';
 import { Articulo2Component } from './inicio/articulo2/articulo2.component';
 import { Articulo3Component } from './inicio/articulo3/articulo3.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { Articulo3Component } from './inicio/articulo3/articulo3.component';
     SobreNosotrosComponent,
     Articulo1Component,
     Articulo2Component,
-    Articulo3Component
+    Articulo3Component,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +44,12 @@ import { Articulo3Component } from './inicio/articulo3/articulo3.component';
     HttpClientModule,
     MatIconModule,
     MatSnackBarModule,
+    MatSidenavModule, // Añadido para usar MatSidenav
+    MatListModule,    // Añadido para usar MatNavList
     FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
