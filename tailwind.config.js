@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,ts}",
+    './src/**/*.{html,ts}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'rombo-blue': '#00A0DE', // Agrega tu color personalizado
+      },
+    },
   },
   plugins: [],
 };

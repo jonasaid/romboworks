@@ -4,12 +4,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-faqs',
-  templateUrl: './faqs.component.html',
-  styleUrls: ['./faqs.component.css'],
+  selector: 'app-contacto', // Cambiado de 'app-faqs' a 'app-contacto'
+  templateUrl: './contacto.component.html', // Cambiado de 'faqs.component.html' a 'contacto.component.html'
+  styleUrls: ['./contacto.component.css'], // Cambiado de 'faqs.component.css' a 'contacto.component.css'
   encapsulation: ViewEncapsulation.None,
 })
-export class FaqsComponent implements OnInit {
+export class ContactoComponent implements OnInit {
   formData = {
     name: '',
     email: '',
