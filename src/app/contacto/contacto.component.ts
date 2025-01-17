@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import * as AOS from 'aos';
 
+
 @Component({
   selector: 'app-contacto', // Cambiado de 'app-faqs' a 'app-contacto'
   templateUrl: './contacto.component.html', // Cambiado de 'faqs.component.html' a 'contacto.component.html'
@@ -60,6 +61,7 @@ export class ContactoComponent implements OnInit {
         panelClass: 'snackbar-warning',
         horizontalPosition: 'center',
         verticalPosition: 'top',
+
       });
     }
   }
