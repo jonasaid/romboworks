@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-inicio',
@@ -11,6 +12,13 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
     this.initBackgroundCarousel();
+
+        // Inicializar AOS
+        AOS.init({
+          duration: 800, // Duración de las animaciones (en ms)
+          once: true,    // Ejecutar las animaciones solo una vez
+          offset: 100,   // Distancia desde el viewport para activar las animaciones
+        });
   }
 
   irAboutUs() {
@@ -51,4 +59,5 @@ export class InicioComponent implements OnInit {
       }, 5000); // Cambia cada 4 segundos
     }
   }
+  
 }

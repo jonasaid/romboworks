@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rombo Works - Inicio</title>
-    <!-- Fuentes y estilos -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="./inicio.component.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-</head>
-
-<body>
-    <!-- Sección Principal (Hero) -->
+<!-- Sección Principal (Hero) -->
     <section class="hero-section">
         <div class="hero-content">
             <h3 class="hero-title text-6xl font-bold">Rombo<span class="hero-title-thin">Works</span></h3> <!-- Texto más grande -->
@@ -24,7 +9,7 @@
     
   
     <!-- Sección de Servicios -->
-    <section class="services-section">
+    <section class="services-section" data-aos="fade-up">
         <div class="services-header">
             <p class="services-tagline">Soluciones de Alto Impacto</p>
             <h2 class="services-title">Transformando la Industria Financiera</h2>
@@ -85,7 +70,7 @@
     </section>
 
     <!-- Sección de artículos o noticias -->
-    <section class="hero-potential">
+    <section class="hero-potential" data-aos="fade-up">
         <div class="hero-text">
             <p class="services-tagline">Inspírate</p>
             <h2 class="services-title">Conoce las novedades de Rombo Works</h2>
@@ -125,7 +110,7 @@
     </section>
   
     <!-- Sección de Testimonios -->
-    <section class="feedback-section">
+    <section class="feedback-section" data-aos="fade-up">
         <div class="feedback-header">
             <h2 class="feedback-title">Alianzas Estratégicas y Conexiones Globales</h2>
             <p class="feedback-subtitle">Colaboramos con organizaciones líderes que valoran la innovación y la excelencia financiera.</p>
@@ -222,7 +207,7 @@
     </section>
 
     <!-- Sección de Llamado a la Acción -->
-    <section class="financial-experience-box">
+    <section class="financial-experience-box" data-aos="fade-up">
         <div class="financial-box-content">
             <h2 class="financial-title">¡Eleva tu Experiencia Financiera!</h2>
             <p class="financial-description">
@@ -238,19 +223,17 @@
     </section>
 
     
-  <!-- Sección final (contenido original del header) -->
-<div class="bg-white py-8">
-    <div
-      class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
-    >
+  <!-- Sección final -->
+  <div class="bg-white py-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
       <!-- Logo -->
-      <div>
+      <div class="flex-1">
         <button routerLink="/inicio">
-        <img
-          src="./assets/rombo-works-logo.png"
-          alt="Rombo Works Logo"
-          class="h-20 md:h-32"
-        />
+          <img
+            src="./assets/rombo-works-logo.png"
+            alt="Rombo Works Logo"
+            class="h-20 md:h-32"
+          />
         </button>
       </div>
   
@@ -278,3 +261,4 @@
         </a>
       </div>
     </div>
+  </div>
