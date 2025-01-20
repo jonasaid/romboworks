@@ -17,11 +17,11 @@
 
   
   <!-- Sección de introducción -->
-  <section class="intro bg-cover bg-center text-center text-black p-8"
+  <section class="intro bg-cover bg-center text-center text-black p-8" data-aos="fade-up"
     style="background-image: url('/assets/v36_12598.png');">
-    <h1 class="text-4xl font-bold">Innovación en Desarrollo de Software para el Sector Financiero</h1>
+    <p class="text-4xl font-extrabold text-rombo-blue">Innovación en Desarrollo de Software para el Sector Financiero</p>
     <div class="my-4"></div>
-    <p class="mt-8 max-w-4xl mx-auto text-xl leading-loose">
+    <p class="mt-8  mx-auto text-xl leading-loose">
         Bienvenidos a <strong>Rombo Works</strong>, su nuevo aliado en soluciones de software innovador para el sector financiero. 
         Nos especializamos en la <strong>creación de tecnología de vanguardia que transforma la operativa financiera</strong> y maximiza la eficiencia.
     </p>
@@ -31,7 +31,7 @@
   
   <!-- Sección de Misión, Visión y Propuesta de Valor -->
 
-  <section class="mission-vision bg-white p-8">
+  <section class="mission-vision bg-white p-8" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center text-blue-500 mb-6">Compromiso y Liderazgo</h2>
     <div class="card-grid grid gap-8 md:grid-cols-3">
       <!-- Tarjeta de Misión -->
@@ -62,7 +62,7 @@
   
 
   <!-- Sección de Equipo -->
-  <section class="team bg-gray-50 p-8">
+  <section class="team bg-gray-50 p-8" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center text-gray-900">Nuestro Equipo</h2>
     <p class="text-center text-gray-600 mt-2">
       Un grupo de profesionales apasionados por la tecnología y la transformación digital.
@@ -95,47 +95,23 @@
   </section>
 
    <!-- Sección de Contacto -->
-  <section class="contact bg-white p-8 text-center">
+  <section class="contact bg-white p-8 text-center" data-aos="fade-up">
     <p class="text-sm text-blue-500 uppercase">Conecta</p>
     <h2 class="text-3xl font-semibold text-blue-500 mb-2">Contáctanos</h2>
     <p class="text-gray-600 mb-8">
         ¿Listo para dar el siguiente paso? Queremos escuchar tus desafíos e impulsarte con nuestras soluciones.
     </p>
 
-    <div class="contact-methods grid grid-cols-1 md:grid-cols-2 gap-8 justify-center text-center">
-        <!-- Email -->
-        <div class="contact-item flex flex-col items-center">
-            <span class="material-icons text-4xl text-blue-500 mb-2">email</span>
-            <h3 class="text-xl font-semibold text-gray-900">Email</h3>
-            <p class="text-gray-600 mb-2">
-                Estamos disponibles para atender tus preguntas y cotizaciones.
-            </p>
-            <a href="mailto:hello@romboworks.com" class="text-blue-500 font-medium">contacto&#64;romboworks.com</a>
-        </div>
-
-        <!-- Teléfono -->
-        <div class="contact-item flex flex-col items-center">
-            <span class="material-icons text-4xl text-blue-500 mb-2">phone</span>
-            <h3 class="text-xl font-semibold text-gray-900">Teléfono</h3>
-            <p class="text-gray-600 mb-2">
-                Uno de nuestros especialistas responderá a tus inquietudes con la mayor rapidez posible.
-            </p>
-            <a href="tel:+15551234567" class="text-blue-500 font-medium">+52 55 5435 8479</a>
-        </div>
-
-    <!-- Ubicación -->
-    <!-- 
-    <div class="contact-item flex flex-col items-center text-center md:text-left">
-      <span class="material-icons text-4xl text-blue-500 mb-2">location_on</span>
-      <h3 class="text-xl font-semibold text-gray-900">Oficinas</h3>
-      <p class="text-gray-600 mb-2">
-        Ven a conocernos y descubre cómo operamos desde el corazón de la innovación financiera.
-      </p>
-      <a href="https://maps.google.com" class="text-blue-500 font-medium" target="_blank">
-        456 Innovation Way, Sydney NSW 2000, AU
-      </a>
-    </div>
-    -->
+    <div class="contact-methods justify-center text-center">
+      <div class="financial-buttons">
+        <button
+          routerLink="/contacto"
+          class="bg-blue-500 text-white py-3 px-6 rounded font-medium text-base cursor-pointer transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white"
+        >
+          Ingresa aqui para contactarnos
+        </button>
+      </div>
+      
     </div>
   </section>
 

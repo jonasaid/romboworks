@@ -1,16 +1,13 @@
 /* -------------------------------------------------- */
 /*                ESTILOS GENERALES                   */
 /* -------------------------------------------------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
+  
 }
 
 /* -------------------------------------------------- */
@@ -152,7 +149,8 @@ body {
 
 .hero-title-thin {
   font-weight: 300; /* Hace el texto más delgado */
-  color: #00A0DE; /* Azul más claro */
+  color: #00A0DE;/* Azul más claro */
+  font-weight: 800;
 }
 
 .hero-tagline {
