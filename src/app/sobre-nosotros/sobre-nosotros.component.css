@@ -139,6 +139,10 @@ body {
     .social-icon {
         font-size: 18px;
     }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+      }
 }
 
 @media (max-width: 480px) {
@@ -221,6 +225,12 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el hover */
+}
+
+.member:hover {
+    transform: translateY(-10px) scale(1.05); /* Sube y aumenta el tamaño */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Más sombra */
 }
 
 .member img {
@@ -247,3 +257,42 @@ body {
     color: #007bff;
     font-weight: bold;
 }
+
+
+/* SECCIÓN DE MISION VISION */
+.card-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card p {
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+
+  
