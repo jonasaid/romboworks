@@ -7,3 +7,24 @@ html, body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+router-outlet {
+  flex-grow: 1;
+}
+.mat-button {
+  outline: none !important; /* Elimina el cuadro de enfoque */
+}
+
+.mat-button .mat-ripple-element {
+  background-color: transparent !important; /* Ripple transparente */
+}
+
+.mat-button:hover {
+  background-color: transparent !important; /* Sin fondo gris al hover */
+}

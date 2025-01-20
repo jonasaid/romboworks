@@ -1,14 +1,15 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-faqs',
   templateUrl: './faqs.component.html',
   styleUrls: ['./faqs.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
-export class FaqsComponent {
+export class FaqsComponent implements OnInit {
   formData = {
     name: '',
     email: '',
@@ -17,33 +18,48 @@ export class FaqsComponent {
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
-  submitForm() {
+  ngOnInit(): void {
+    // Inicializar AOS
+    AOS.init({
+      duration: 800, // Duración de las animaciones en milisegundos
+      once: true,    // Ejecutar las animaciones solo una vez
+      offset: 100,   // Distancia desde el viewport para activar las animaciones
+    });
+  }
+
+  openQuestions: { [key: number]: boolean } = {};
+
+  toggleQuestion(questionNumber: number): void {
+    this.openQuestions[questionNumber] = !this.openQuestions[questionNumber];
+  }
+
+  submitForm(): void {
     if (this.formData.name && this.formData.email && this.formData.feedback) {
       this.http.post('http://localhost:5000/send-email', this.formData).subscribe(
         (response: any) => {
           this.snackBar.open('Correo enviado exitosamente', 'Cerrar', {
             duration: 5000,
-            panelClass: 'snackbar-success', // Clase personalizada
+            panelClass: 'snackbar-success',
             horizontalPosition: 'center',
-            verticalPosition: 'top'
+            verticalPosition: 'top',
           });
-          this.formData = { name: '', email: '', feedback: '' };
+          this.formData = { name: '', email: '', feedback: '' }; // Limpiar formulario
         },
         (error: any) => {
           this.snackBar.open('Error al enviar el correo', 'Cerrar', {
             duration: 5000,
-            panelClass: 'snackbar-error', // Clase personalizada
+            panelClass: 'snackbar-error',
             horizontalPosition: 'center',
-            verticalPosition: 'top'
+            verticalPosition: 'top',
           });
         }
       );
     } else {
       this.snackBar.open('Por favor, completa todos los campos', 'Cerrar', {
         duration: 5000,
-        panelClass: 'snackbar-warning', // Clase personalizada
+        panelClass: 'snackbar-warning',
         horizontalPosition: 'center',
-        verticalPosition: 'top'
+        verticalPosition: 'top',
       });
     }
   }

@@ -8,22 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   showToolbar = true;
+  isMenuOpen = false; // Controla el estado del menú en dispositivos móviles
 
   constructor(private router: Router) {}
 
-  irInicio() {
-    this.router.navigate(['/inicio']);
-  }
-
-  irServices() {
-    this.router.navigate(['/servicios']);
-  }
-
-  irFAQs() {
-    this.router.navigate(['/faqs']);
-  }
-
-  irAboutUs() {
-    this.router.navigate(['/sobre-nosotros']);
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

@@ -1,206 +1,227 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- Sección de contacto -->
+<div class="flex flex-col md:flex-row gap-8 bg-white p-16 rounded-lg" data-aos="fade-up">
+  <div class="flex-1 flex justify-center items-center">
+    <img
+      src="./assets/ContacUS.jpg"
+      alt="Contáctanos"
+      class="max-w-full max-h-96 object-contain rounded-lg shadow-md"
+    />
+  </div>
+  <div class="flex-1">
+    <p class="text-rombo-blue text-3xl font-extrabold mb-4">Contáctanos</p>
+    <p class="text-gray-600 text-base mb-6">
+      Estamos aquí para resolver tus dudas y apoyarte en lo que necesites.
+    </p>
+    <form class="grid grid-cols-1 gap-4">
+      <input
+        type="text"
+        placeholder="Nombre"
+        class="p-3 border border-gray-300 rounded-lg"
+      />
+      <input
+        type="email"
+        placeholder="Correo Electrónico"
+        class="p-3 border border-gray-300 rounded-lg"
+      />
+      <textarea
+        rows="4"
+        placeholder="Mensaje"
+        class="p-3 border border-gray-300 rounded-lg"
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-rombo-blue text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+      >
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+<!-- Sección del mapa y datos de contacto -->
+<div class="bg-white py-16 px-16" data-aos="fade-up">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row gap-8">
+    <div class="flex-1">
+      <p class="text-rombo-blue text-3xl font-extrabold mb-4">Datos de Contacto</p>
+      <div class="space-y-6">
+        <div class="flex items-start space-x-4">
+          <span class="material-icons text-blue-500 text-2xl">email</span>
+          <div>
+            <h3 class="font-semibold text-gray-800">Email</h3>
+            <p class="text-gray-600">ismael.hdz.m@gmail.com</p>
+            <a href="mailto:ismael.hdz.m@gmail.com" class="text-blue-500 hover:underline">Enviar correo</a>
+          </div>
+        </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rombo Works - FAQs</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="./faqs.component.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-</head>
+        <div class="flex items-start space-x-4">
+          <span class="material-icons text-blue-500 text-2xl">phone</span>
+          <div>
+            <h3 class="font-semibold text-gray-800">Teléfono</h3>
+            <p class="text-gray-600">+52 (55) 5435-8479</p>
+          </div>
+        </div>
 
-<body class="bg-gray-100 font-roboto text-gray-800">
+        <div class="flex items-start space-x-4">
+          <span class="material-icons text-blue-500 text-2xl">place</span>
+          <div>
+            <h3 class="font-semibold text-gray-800">Oficina</h3>
+            <p class="text-gray-600">Ciudad de Mexico, Mexico</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 flex justify-center items-center bg-white rounded-lg">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481729.04855758674!2d-99.47327143501768!3d19.390436594470376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1737081908833!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
 
-  <section class="faqs-intro bg-white p-8">
-    <h2 class="hero-title">Contáctanos!</h2>
-    <p class="text-gray-600 max-w-md">Estamos aquí para apoyarte, contestar tus dudas, o para posibles colaboraciones.
-      Reach out today!</p>
-  </section>
+<div class="container mx-auto py-16 px-16 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
+  <!-- Columna izquierda -->
+  <div class="flex flex-col justify-center">
+    <p class="text-3xl md:text-5xl font-extrabold text-rombo-blue mb-4">Preguntas Frecuentes</p>
+    <p class="text-gray-600 text-lg md:text-2xl">
+      Encuentra las respuestas a tus dudas sobre nuestras soluciones tecnológicas.
+    </p>
+  </div>
 
-    <!-- Sección de Cuestionario -->
-    <section class="questionnaire bg-white p-8">
-      <h2 class="hero-title">Cuestionario</h2>
-      <p class="text-gray-600 max-w-md mb-8">Completa el siguiente formulario para contactarnos.</p>
-  
-      <form (ngSubmit)="submitForm()" class="questionnaire-form max-w-lg">
-        <label class="block text-gray-700 text-sm font-semibold mb-2" for="name">Nombre</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          [(ngModel)]="formData.name"
-          required
-          class="w-full p-2 border border-gray-300 rounded mb-4"
-          placeholder="Escribe tu nombre"
+  <!-- Columna derecha -->
+  <div class="space-y-4">
+    <!-- Pregunta 1 -->
+    <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <div 
+        class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
+        (click)="toggleQuestion(1)"
+      >
+        <span>¿Qué es RegTech?</span>
+        <span
+          class="material-icons text-rombo-blue transform transition-transform duration-300"
+          [class.rotate-180]="openQuestions[1]"
         >
-  
-        <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">Correo Electrónico</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          [(ngModel)]="formData.email"
-          required
-          class="w-full p-2 border border-gray-300 rounded mb-4"
-          placeholder="Escribe tu correo electrónico"
+          expand_more
+        </span>
+      </div>
+      <div 
+        class="overflow-hidden transition-all duration-700"
+        [style.maxHeight]="openQuestions[1] ? '300px' : '0'"
+      >
+        <p class="text-gray-700 mt-4 pt-4">
+          RegTech utiliza tecnología para cumplir con normativas, automatizar procesos regulatorios y gestionar riesgos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <div 
+        class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
+        (click)="toggleQuestion(2)"
+      >
+        <span>¿Cómo la IA puede ayudarnos?</span>
+        <span
+          class="material-icons text-rombo-blue transform transition-transform duration-300"
+          [class.rotate-180]="openQuestions[2]"
         >
-  
-        <label class="block text-gray-700 text-sm font-semibold mb-2" for="feedback">Mensaje</label>
-        <textarea
-          id="feedback"
-          name="feedback"
-          rows="4"
-          [(ngModel)]="formData.feedback"
-          required
-          class="w-full p-2 border border-gray-300 rounded mb-4"
-          placeholder="Escribe tu mensaje"
-        ></textarea>
-  
-        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Enviar</button>
-      </form>
-    </section>
-
-  <!-- Sección de Contacto -->
-  <section class="contact bg-white p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="contact-info space-y-6">
-      <h2 class="hero-title">Contact us</h2>
-      <p class="text-gray-600">Encuentra nuestras oficinas y conecta facilmente con nosotros.</p>
-
-      <div class="contact-item flex items-start space-x-4">
-        <span class="material-icons text-blue-500 text-2xl">email</span>
-        <div>
-          <h3 class="font-semibold text-gray-800">Email</h3>
-          <p class="text-gray-600">Lorem ipsum dolor sit amet.</p>
-          <a href="mailto:hello@relume.io" class="text-blue-500 hover:underline">hellorelume.io</a>
-        </div>
+          expand_more
+        </span>
       </div>
-
-      <div class="contact-item flex items-start space-x-4">
-        <span class="material-icons text-blue-500 text-2xl">phone</span>
-        <div>
-          <h3 class="font-semibold text-gray-800">Phone</h3>
-          <p class="text-gray-600">Lorem ipsum dolor sit amet.</p>
-          <a href="tel:+1555000000" class="text-blue-500 hover:underline">+1 (555) 000-0000</a>
-        </div>
-      </div>
-
-      <div class="contact-item flex items-start space-x-4">
-        <span class="material-icons text-blue-500 text-2xl">place</span>
-        <div>
-          <h3 class="font-semibold text-gray-800">Office</h3>
-          <p class="text-gray-600">456 Innovation Rd, Melbourne VIC 3000 AU</p>
-          <a href="#" class="text-blue-500 hover:underline">Get Directions</a>
-        </div>
+      <div 
+        class="overflow-hidden transition-all duration-700"
+        [style.maxHeight]="openQuestions[2] ? '300px' : '0'"
+      >
+        <p class="text-gray-700 mt-4 pt-4">
+          La Inteligencia Artificial mejora la toma de decisiones y la eficiencia al automatizar procesos rutinarios.
+        </p>
       </div>
     </div>
 
-    <div class="contact-map bg-gray-300 flex justify-center items-center">
-      <span class="material-icons text-gray-500 text-6xl">location_on</span>
+    <!-- Pregunta 3 -->
+    <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <div 
+        class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
+        (click)="toggleQuestion(3)"
+      >
+        <span>¿Qué es la banca digital?</span>
+        <span
+          class="material-icons text-rombo-blue transform transition-transform duration-300"
+          [class.rotate-180]="openQuestions[3]"
+        >
+          expand_more
+        </span>
+      </div>
+      <div 
+        class="overflow-hidden transition-all duration-700"
+        [style.maxHeight]="openQuestions[3] ? '300px' : '0'"
+      >
+        <p class="text-gray-700 mt-4 pt-4">
+          La banca digital opera en línea, ofreciendo soluciones avanzadas para un acceso rápido y seguro.
+        </p>
+      </div>
     </div>
-  </section>
 
-  <!-- Sección de FAQs con diseño de dos columnas -->
-  <section class="faqs bg-white p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-    <!-- Columna izquierda -->
-    <div class="faqs-intro">
-      <h2 class="hero-title">FAQs</h2>
-      <p class="text-gray-600 max-w-md mb-8">Encuentra las repuestas a preguntas frecuentes sobre nuestas soluciones de software 
-        financiero innovativas.</p>
-      <button class="border border-gray-300 text-blue-500 py-2 px-4 rounded hover:bg-blue-100">Contact</button>
+    <!-- Pregunta 4 -->
+    <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <div 
+        class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
+        (click)="toggleQuestion(4)"
+      >
+        <span>¿Qué es Big Data?</span>
+        <span
+          class="material-icons text-rombo-blue transform transition-transform duration-300"
+          [class.rotate-180]="openQuestions[4]"
+        >
+          expand_more
+        </span>
+      </div>
+      <div 
+        class="overflow-hidden transition-all duration-700"
+        [style.maxHeight]="openQuestions[4] ? '300px' : '0'"
+      >
+        <p class="text-gray-700 mt-4 pt-4">
+          Big Data analiza grandes volúmenes de información para tomar decisiones estratégicas basadas en datos.
+        </p>
+      </div>
     </div>
+  </div>
+</div>
 
-    <!-- Columna derecha -->
-    <div class="faqs-questions space-y-4">
-      <details class="faq-item border-b border-gray-300 pb-4">
-        <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>¿Qué es RegTech?</span>
-          <span class="material-icons text-blue-500">expand_more</span>
-        </summary>
-        <p class="faq-answer text-gray-600 mt-2">RegTech, or regulatory technology, refers to the use of technology to
-          help companies comply with regulations. It automates compliance processes and enhances risk management. This
-          ensures that financial institutions can operate efficiently while adhering to legal requirements.</p>
-      </details>
-
-      <details class="faq-item border-b border-gray-300 pb-4">
-        <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>¿Cómo es que la IA puede ayudarnos?</span>
-          <span class="material-icons text-blue-500">expand_more</span>
-        </summary>
-        <p class="faq-answer text-gray-600 mt-2">Artificial Intelligence enhances financial services by providing
-          predictive analytics and automating routine tasks. This leads to improved decision-making and operational
-          efficiency. As a result, businesses can focus on strategic initiatives rather than mundane processes.</p>
-      </details>
-
-      <details class="faq-item border-b border-gray-300 pb-4">
-        <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>¿Qué es la banca digital?</span>
-          <span class="material-icons text-blue-500">expand_more</span>
-        </summary>
-        <p class="faq-answer text-gray-600 mt-2">Digital banks operate exclusively online without physical branches.
-          They offer advanced mobile and online banking solutions, making banking more accessible and convenient.
-          Customers benefit from lower fees and enhanced user experiences.</p>
-      </details>
-
-      <details class="faq-item border-b border-gray-300 pb-4">
-        <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>¿Qué es big data?</span>
-          <span class="material-icons text-blue-500">expand_more</span>
-        </summary>
-        <p class="faq-answer text-gray-600 mt-2">Big data refers to the vast volumes of data generated every second.
-          Analyzing this data allows financial institutions to gain insights and tailor services to individual customer
-          needs. It empowers businesses to make data-driven decisions.</p>
-      </details>
-
-      <details class="faq-item border-b border-gray-300 pb-4">
-        <summary class="faq-question flex justify-between items-center font-semibold text-gray-800 cursor-pointer">
-          <span>¿Que tan seguro es?</span>
-          <span class="material-icons text-blue-500">expand_more</span>
-        </summary>
-        <p class="faq-answer text-gray-600 mt-2">Our solutions prioritize top-tier security measures to protect
-          sensitive financial data. We implement robust encryption and compliance protocols to ensure safety. Clients
-          can trust that their information is secure with us.</p>
-      </details>
-    </div>
-  </section>
-
-  <header class="header-container">
+<!-- Sección final -->
+<div class="bg-white py-8">
+  <div
+    class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
+  >
     <!-- Logo -->
-    <div class="logo-container">
-      <img src="./assets/rombo-works-logo.png" alt="Rombo Works Logo" class="logo">
+    <div>
+      <button routerLink="/inicio">
+      <img
+        src="./assets/rombo-works-logo.png"
+        alt="Rombo Works Logo"
+        class="h-20 md:h-32"
+      />
+      </button>
     </div>
 
     <!-- Menú de navegación -->
-    <nav class="nav-menu">
-      <a href="#" class="nav-link">About Us</a>
-      <a href="#" class="nav-link">Contact Us</a>
-      <a href="#" class="nav-link">Our Services</a>
+    <nav class="flex flex-wrap justify-center gap-4">
+       <button mat-button routerLink="/servicios" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+      <span>Servicios</span>
+    </button>
+    <button mat-button routerLink="/faqs" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+      <span>Contacto</span>
+    </button>
+    <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+      <span>Nosotros</span>
+    </button>
     </nav>
 
     <!-- Redes sociales -->
-    <div class="social-icons">
-      <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    <div class="flex justify-center gap-4 text-blue-600 py-4">
+      <a
+        href="https://www.linkedin.com/in/ismael-hernandez-monroy/"
+        class="hover:opacity-70 text-6xl"
+        aria-label="LinkedIn"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
-  </header>
-
-
-
-  <footer class="footer bg-white py-4 text-center border-t border-gray-200">
-    <div class="footer-legal text-gray-600 text-sm flex flex-col md:flex-row justify-center items-center space-x-2">
-      <p class="mb-0 md:mb-0">© 2024 Rombo Works. All rights reserved.</p>
-      <nav class="flex justify-center space-x-4">
-        <a href="#" class="hover:text-blue-500">Privacy Policy</a>
-        <a href="#" class="hover:text-blue-500">Terms of Use</a>
-        <a href="#" class="hover:text-blue-500">Cookie Preferences</a>
-      </nav>
-    </div>
-  </footer>
-
-</body>
-
-</html>
+  </div>
+</div>
