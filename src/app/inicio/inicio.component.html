@@ -16,11 +16,12 @@
     <!-- Sección Principal (Hero) -->
     <section class="hero-section">
         <div class="hero-content">
-            <h3 class="hero-tagline">Innovación Financiera</h3>
-            <h2 class="hero-title">Impulsa tu crecimiento con soluciones digitales de vanguardia</h2>
+            <h3 class="hero-title text-6xl font-bold">Rombo<span class="hero-title-thin">Works</span></h3> <!-- Texto más grande -->
+            <h2 class="hero-tagline text-lg font-medium">Impulsa tu crecimiento con soluciones digitales de vanguardia</h2> <!-- Texto más pequeño -->
             <button mat-button class="hero-button" (click)="irAboutUs()">¡Conócenos!</button>
         </div>
     </section>
+    
   
     <!-- Sección de Servicios -->
     <section class="services-section">
@@ -41,10 +42,10 @@
                     optimizando tus operaciones y aportando valor a cada cliente.
                 </p>
                 <div class="service-actions">
-                    <button class="btn btn-primary">Más Información</button>
-                    <button class="btn btn-secondary">
-                        Comenzar 
+                    <button class="btn btn-secondary" (click)="irServices()">   
                         <span class="material-icons">arrow_forward</span>
+                        Más Información
+                        
                     </button>
                 </div>
             </div>
@@ -58,9 +59,9 @@
                     Soluciones intuitivas y seguras para optimizar la experiencia bancaria en línea y móvil.
                 </p>
                 <div class="service-actions">
-                    <button class="btn btn-primary">
-                        Más Información 
+                    <button class="btn btn-secondary" (click)="irServices()"> 
                         <span class="material-icons">arrow_forward</span>
+                        Más Información 
                     </button>
                 </div>
             </div>
@@ -74,9 +75,9 @@
                     Aprovecha el poder de los datos para tomar decisiones financieras inteligentes y personalizadas.
                 </p>
                 <div class="service-actions">
-                    <button class="btn btn-primary">
-                        Más Información 
+                    <button class="btn btn-secondary" (click)="irServices()">
                         <span class="material-icons">arrow_forward</span>
+                        Más Información    
                     </button>
                 </div>
             </div>
@@ -86,12 +87,13 @@
     <!-- Sección de artículos o noticias -->
     <section class="hero-potential">
         <div class="hero-text">
-            <p class="era-tagline">Inspírate</p>
-            <h2 class="era-title">Conoce las novedades de Rombo Works</h2>
+            <p class="services-tagline">Inspírate</p>
+            <h2 class="services-title">Conoce las novedades de Rombo Works</h2>
+            <p class="services-subtitle">Mantente actualizado con las últimas tendencias, innovaciones y logros de Rombo Works en la transformación digital del sector financiero</p>
         </div>   
         <div class="card-container">
             <a [routerLink]="'/articulo1'" class="card">
-                <img src="./assets/rombo-works-logo.png" alt="Article 1 Image" class="card-image">
+                <img src="./assets/1.webp" alt="Article 1 Image" class="card-image">
                 <div class="card-content">
                     <p class="card-date">2025-01-07</p>
                     <h3 class="card-title">Transformación Digital en el Sector Bancario</h3>
@@ -101,7 +103,7 @@
             </a>
             
             <a [routerLink]="'/articulo2'" class="card">
-                <img src="./assets/rombo-works-logo.png" alt="Article 2 Image" class="card-image">
+                <img src="./assets/2.webp" alt="Article 2 Image" class="card-image">
                 <div class="card-content">
                     <p class="card-date">2024-10-12</p>
                     <h3 class="card-title">Inteligencia Artificial para la Prevención de Fraudes</h3>
@@ -111,7 +113,7 @@
             </a>
             
             <a [routerLink]="'/articulo3'" class="card">
-                <img src="./assets/rombo-works-logo.png" alt="Article 3 Image" class="card-image">
+                <img src="./assets/3.webp" alt="Article 3 Image" class="card-image">
                 <div class="card-content">
                     <p class="card-date">2024-05-06</p>
                     <h3 class="card-title">Alianzas Estratégicas Globales</h3>
@@ -121,12 +123,12 @@
             </a>
         </div>
     </section>
-
+  
     <!-- Sección de Testimonios -->
     <section class="feedback-section">
         <div class="feedback-header">
-            <h2 class="feedback-title">Opiniones de Nuestros Clientes</h2>
-            <p class="feedback-subtitle">Descubre cómo nuestras soluciones han impactado la industria financiera.</p>
+            <h2 class="feedback-title">Alianzas Estratégicas y Conexiones Globales</h2>
+            <p class="feedback-subtitle">Colaboramos con organizaciones líderes que valoran la innovación y la excelencia financiera.</p>
         </div>
         <div class="feedback-grid">
             <!-- Testimonio 1 -->
@@ -134,17 +136,15 @@
                 <div class="feedback-stars">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <p class="feedback-text">"Rombo Works llevó nuestro sistema bancario a otro nivel. Las integraciones de IA 
-                    nos han ahorrado tiempo y costes de forma significativa."</p>
+                <p class="feedback-text">"Colaborar con Rombo Works ha sido una experiencia enriquecedora. Su enfoque en la innovación tecnológica complementa perfectamente nuestras necesidades operativas."</p>
                 <div class="feedback-client">
-                    <div class="client-avatar"></div>
                     <div class="client-info">
-                        <p class="client-name">Laura Gómez</p>
-                        <p class="client-role">CTO, BankTec</p>
+                        <p class="client-name">Valantic</p>
+                        <p class="client-role">Holger von Daniels</p>
                     </div>
-                </div>
-                <div class="feedback-logo">
-                    <img src="https://via.placeholder.com/50x20" alt="BankTec Logo">
+                    <div class="feedback-logo">
+                        <img src="./assets/valantic.jpeg" alt="FinReg Logo">
+                    </div>
                 </div>
             </div>
 
@@ -153,36 +153,69 @@
                 <div class="feedback-stars">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <p class="feedback-text">"Nuestros procesos de compliance ahora son más ágiles y eficientes. 
-                    Un verdadero socio tecnológico de confianza."</p>
+                <p class="feedback-text">"Rombo Works ha demostrado ser un aliado confiable en el desarrollo de soluciones eficientes y personalizadas para nuestros desafíos técnicos."</p>
                 <div class="feedback-client">
-                    <div class="client-avatar"></div>
                     <div class="client-info">
-                        <p class="client-name">Carlos Pérez</p>
-                        <p class="client-role">Director Operaciones, FinReg</p>
+                        <p class="client-name">LeanXcale</p>
+                        <p class="client-role">Ricardo Jimenez-Peris</p>
+                    </div>
+                    <div class="feedback-logo">
+                        <img src="./assets/lean.png" alt="FinReg Logo">
                     </div>
                 </div>
-                <div class="feedback-logo">
-                    <img src="https://via.placeholder.com/50x20" alt="FinReg Logo">
-                </div>
             </div>
+
 
             <!-- Testimonio 3 -->
             <div class="feedback-card">
                 <div class="feedback-stars">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <p class="feedback-text">"Nos encanta la cultura de innovación de Rombo Works. 
-                    Su equipo es increíblemente flexible y experto en banca digital."</p>
+                <p class="feedback-text">"La experiencia de Rombo Works en el sector financiero nos ha permitido alcanzar nuevos niveles de eficiencia y adaptabilidad en nuestros proyectos."</p>
                 <div class="feedback-client">
-                    <div class="client-avatar"></div>
                     <div class="client-info">
-                        <p class="client-name">Andrés Moreno</p>
-                        <p class="client-role">CEO, NeoFinance</p>
+                        <p class="client-name">Nova Solutions Systems</p>
+                        <p class="client-role">Rodrigo Gonzalez</p>
+                    </div>
+                    <div class="feedback-logo">
+                        <img src="./assets/novasolutionsystems_logo.jpeg" alt="FinReg Logo">
                     </div>
                 </div>
-                <div class="feedback-logo">
-                    <img src="https://via.placeholder.com/50x20" alt="NeoFinance Logo">
+            </div>
+
+            
+
+            <!-- Testimonio 4 -->
+            <div class="feedback-card">
+                <div class="feedback-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="feedback-text">"Rombo Works aporta un enfoque fresco e innovador que ha mejorado significativamente nuestra capacidad para implementar soluciones digitales."</p>
+                <div class="feedback-client">
+                    <div class="client-info">
+                        <p class="client-name">Neaxis</p>
+                        <p class="client-role">Rafael Juárez Hernández</p>
+                    </div>
+                    <div class="feedback-logo">
+                        <img src="./assets/neaxis_logo.png" alt="FinReg Logo">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="feedback-card">
+                <div class="feedback-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="feedback-text">"Gracias a la colaboración con Rombo Works, hemos optimizado nuestras herramientas de análisis y fortalecido la toma de decisiones estratégicas."</p>
+                <div class="feedback-client">
+                    <div class="client-info">
+                        <p class="client-name">BIMEX Analytics</p>
+                        <p class="client-role">Pablo Sanchez Bencomo</p>
+                    </div>
+                    <div class="feedback-logo">
+                        <img src="./assets/bimex_analytics_logo.jpeg" alt="FinReg Logo">
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,50 +229,52 @@
                 Ponte en contacto con nuestro equipo y descubre cómo podemos impulsar tu futuro digital en finanzas.
             </p>
             <div class="financial-buttons">
-                <button class="btn btn-primary">Solicitar Demo</button>
-                <button class="btn btn-secondary">Saber Más</button>
+                <button class="btn btn-secondary" (click)="irAboutUs()">Saber Más</button>
             </div>
         </div>
         <div class="financial-box-image">
-            <div class="image-placeholder"></div>
+            <img src="./assets/secretaria.jpeg" alt="Financial Experience" class="financial-image">
         </div>
     </section>
 
-    <!-- Encabezado (Header) con Menú y Redes Sociales -->
-    <header class="header-container">
-        <!-- Logo -->
-        <div class="logo-container">
-            <img src="./assets/rombo-works-logo.png" alt="Rombo Works Logo" class="logo">
-        </div>
-
-        <!-- Menú de navegación -->
-        <nav class="nav-menu">
-            <a href="#" class="nav-link">Sobre Nosotros</a>
-            <a href="#" class="nav-link">Contáctanos</a>
-            <a href="#" class="nav-link">Nuestros Servicios</a>
-        </nav>
-
-        <!-- Redes sociales -->
-        <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-        </div>
-    </header>
-
-    <!-- Pie de Página (Footer) -->
-    <footer class="footer bg-white py-4 text-center border-t border-gray-200">
-        <div class="footer-legal text-gray-600 text-sm flex flex-col md:flex-row justify-center items-center space-x-2">
-            <p class="mb-0 md:mb-0">© 2025 Rombo Works. Todos los derechos reservados.</p>
-            <nav class="flex justify-center space-x-4">
-                <a href="#" class="hover:text-blue-500">Políticas de Privacidad</a>
-                <a href="#" class="hover:text-blue-500">Términos de Uso</a>
-                <a href="#" class="hover:text-blue-500">Preferencias de Cookies</a>
-            </nav>
-        </div>
-    </footer>
-
-</body>
-</html>
+    
+  <!-- Sección final (contenido original del header) -->
+<div class="bg-white py-8">
+    <div
+      class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
+    >
+      <!-- Logo -->
+      <div>
+        <button routerLink="/inicio">
+        <img
+          src="./assets/rombo-works-logo.png"
+          alt="Rombo Works Logo"
+          class="h-20 md:h-32"
+        />
+        </button>
+      </div>
+  
+      <!-- Menú de navegación -->
+      <nav class="flex flex-wrap justify-center gap-4">
+         <button mat-button routerLink="/servicios" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Servicios</span>
+      </button>
+      <button mat-button routerLink="/contacto" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Contacto</span>
+      </button>
+      <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Nosotros</span>
+      </button>
+      </nav>
+  
+      <!-- Redes sociales -->
+      <div class="flex justify-center gap-4 text-blue-600 py-4">
+        <a
+          href="https://www.linkedin.com/in/rombo-works-007639220/"
+          class="hover:opacity-70 text-6xl"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
