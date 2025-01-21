@@ -9,8 +9,21 @@ body {
     padding: 0;
     line-height: 1.6;
     font-size: 16px;
-    color: #007bff;
+    color: #00A0DE;
 }
+
+.text-custom-blue {
+    color: #00A0DE;
+    font-size: 2rem; /* Ajusta el tamaño según lo necesario */
+    font-weight: bold;
+  }
+
+  .text-custom-blue-sub {
+    color: #00A0DE;
+    font-size: 1rem; /* Ajusta el tamaño según lo necesario */
+    font-weight: bold;
+  }
+  
 
 /* HEADER */
 .header {
@@ -40,65 +53,9 @@ body {
 }
 
 .nav a:hover {
-    color: #00a0de;
+    color: #00A0DE;
 }
 
-/* Redes sociales del Header */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 32px;
-    background-color: #ffffff;
-    margin-bottom: 50px;
-}
-
-.logo-container {
-    flex: 1;
-}
-
-.logo {
-    height: 200px;
-    max-width: 100%; /* Evita deformaciones */
-    object-fit: contain;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    flex: 2;
-    gap: 32px;
-}
-
-.nav-link {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    color: #4a4a4a;
-    transition: color 0.3s;
-    text-align: center;
-}
-
-.nav-link:hover {
-    color: #007bff;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
-    gap: 16px;
-    color: #007bff;
-}
-
-.social-icon {
-    font-size: 20px;
-    transition: opacity 0.3s;
-}
-
-.social-icon:hover {
-    opacity: 0.7;
-}
 
 /* RESPONSIVIDAD DEL HEADER */
 @media (max-width: 768px) {
@@ -254,7 +211,7 @@ body {
 }
 
 .member p.text-blue-500 {
-    color: #007bff;
+    color: #00A0DE;
     font-weight: bold;
 }
 
@@ -282,7 +239,7 @@ body {
   }
   
   .card h3 {
-    color: #007bff;
+    color: #00A0DE;
     margin-bottom: 10px;
     font-size: 1.25rem;
     font-weight: bold;
