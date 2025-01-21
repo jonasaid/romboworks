@@ -36,7 +36,7 @@ export class ContactoComponent implements OnInit {
 
   submitForm(): void {
     if (this.formData.name && this.formData.email && this.formData.feedback) {
-      this.http.post('http://api.romboworks.com/send-email', this.formData).subscribe(
+      this.http.post('https://api.romboworks.com/send-email', this.formData).subscribe(
         (response: any) => {
           this.snackBar.open('Correo enviado exitosamente', 'Cerrar', {
             duration: 5000,
