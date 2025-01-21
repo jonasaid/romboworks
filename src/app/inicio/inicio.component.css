@@ -148,9 +148,9 @@ body {
 }
 
 .hero-title-thin {
-  font-weight: 300; /* Hace el texto más delgado */
+  font-weight: 300 !important; /* Hace el texto más delgado */
   color: #00A0DE;/* Azul más claro */
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .hero-tagline {
@@ -176,7 +176,7 @@ body {
 .hero-button:hover {
   transform: translateY(-3px) scale(1.1); /* Eleva y agranda el botón */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Añade sombra */
-  background-color: #0056b3; /* Oscurece el color */
+  background-color: #00A0DE !important; /* Oscurece el color */
 }
 
 /* -------------------------------------------------- */
@@ -206,7 +206,7 @@ body {
 
 /* Botón secundario (borde azul) */
 .btn-secondary {
-  background-color: #007bff !important;
+  background-color: #00A0DE !important;
   color: #fff !important;
   padding: 0.75rem 1.5rem !important;
   border: none !important;
@@ -248,7 +248,7 @@ body {
 
 .services-tagline {
   font-size: 1rem;
-  color: #007bff;
+  color: #00A0DE;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -256,7 +256,7 @@ body {
 .services-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #007bff;
+  color: #00A0DE;
   margin-bottom: 1rem;
 }
 
@@ -391,7 +391,7 @@ body {
 .feedback-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #007bff;
+  color: #00A0DE;
 }
 
 .feedback-subtitle {
@@ -408,7 +408,7 @@ body {
 
 @media (min-width: 768px) {
   .feedback-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -426,40 +426,48 @@ body {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.feedback-stars {
-  font-size: 1.5rem;
-  color: #fbc02d;
-  margin-bottom: 1rem;
-}
-
 .feedback-text {
   font-size: 1rem;
   color: #333;
   font-style: italic;
   margin-bottom: 1.5rem;
 }
-
 .feedback-client {
   display: flex;
-  align-items: center;
-  margin-top: 1rem; /* Ajusta según necesites */
-  justify-content: space-between; /* O retira si no es necesario */
+  align-items: center; /* Asegura que estén alineados verticalmente */
+  justify-content: space-between; /* Espacia el nombre y el logo uniformemente */
+  margin-top: 1rem;
+  height: 100px; /* Define una altura fija para asegurar alineación */
 }
 
 .client-info {
   text-align: left;
+  flex: 1; /* Permite al texto ocupar espacio flexible */
 }
 
 .client-name {
   font-size: 1rem;
   font-weight: bold;
   color: #333;
+  margin: 0; /* Elimina márgenes innecesarios */
+  line-height: 1.5; /* Para mejorar la legibilidad */
 }
 
-.client-role {
-  font-size: 0.875rem;
-  color: #666;
+.feedback-logo {
+  flex: 0; /* Evita que el logo tome más espacio */
+  display: flex;
+  align-items: center; /* Centra el logo verticalmente */
+  justify-content: center; /* Centra el logo horizontalmente */
 }
+
+.feedback-logo img {
+  max-width: 80px; /* Ajusta el tamaño máximo del logo */
+  height: auto;
+  object-fit: contain;
+}
+
+
+
 
 /* -------------------------------------------------- */
 /*   SECCIÓN DE EXPERIENCIA FINANCIERA (Financial)    */
@@ -493,7 +501,7 @@ body {
 .financial-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff;
+  color: #00A0DE;
   margin-bottom: 0.8rem;
 }
 
