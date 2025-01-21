@@ -11,12 +11,14 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-// Configurar transporte de nodemailer
+// Configurar transporte de nodemailer para IONOS
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.ionos.mx', // Servidor SMTP de IONOS
+  port: 465, // Puerto para TLS
+  secure: true, // Cambiar a true si usas SSL en el puerto 465
   auth: {
-    user: process.env.GMAIL_USER, // Correo desde el que se enviarán los correos
-    pass: process.env.GMAIL_PASS, // Contraseña del correo
+    user: process.env.IONOS_USER, // Tu correo en IONOS
+    pass: process.env.IONOS_PASS, // Tu contraseña de correo
   },
 });
 
@@ -26,8 +28,8 @@ app.post('/send-email', (req, res) => {
 
   // Configuración del correo con formato HTML
   const mailOptions = {
-    from: email, // Dirección del remitente (correo ingresado por el usuario)
-    to: 'pedro.ptewver1234@gmail.com', // Dirección de destino
+    from: process.env.IONOS_USER, // Dirección del remitente (tu cuenta IONOS)
+    to: 'info@romboworks.com', // Dirección de destino
     subject: `Nuevo mensaje de contacto: ${name}`,
     html: `
       <h1>Mensaje recibido de formulario de contacto</h1>
