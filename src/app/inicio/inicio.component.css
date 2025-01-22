@@ -140,31 +140,35 @@ body {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 15rem;
   font-weight: bold;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  margin-bottom: 1rem;
+  margin-bottom: 10rem;
 }
 
 .hero-title-thin {
   font-weight: 300 !important; /* Hace el texto más delgado */
   color: #00A0DE;/* Azul más claro */
-  font-weight: 800 !important;
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 500;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
+
+#dynamic-text {
+  transition: opacity 0.5s ease-in-out !important;
+}
+
 
 .hero-button {
   display: inline-block;
-  padding: 15px 30px;
-  font-size: 1rem;
+  padding: 20px 40px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
   background-color: #00142e;
@@ -645,11 +649,17 @@ body {
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 5rem; /* Reduce el tamaño del título */
+    margin-bottom: 6rem; /* Ajusta el margen inferior */
   }
 
-  .hero-tagline {
-    font-size: 1.2rem;
+  .hero-title-thin {
+    font-size: 5rem; /* Coincide con el tamaño del título principal */
+  }
+
+   .hero-tagline {
+    font-size: 2rem; /* Ajusta el tamaño del subtítulo */
+    margin-bottom: 2rem; /* Reduce el margen inferior */
   }
 
   .hero-button {
@@ -739,3 +749,22 @@ body {
     max-height: 150px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 5rem; /* Reduce aún más el tamaño en pantallas pequeñas */
+    margin-bottom: 4rem;
+  }
+
+  .hero-title-thin {
+    font-size: 5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
+}
+
+
