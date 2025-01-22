@@ -12,18 +12,25 @@ export class InicioComponent implements OnInit {
     'Impulsa tu crecimiento con soluciones digitales de vanguardia',
     'Plataformas de banca digital que conectan con el futuro',
     'Automatiza procesos con inteligencia artificial y machine learning',
-    'Cumple con las normativas con nuestras soluciones RegTech avanzadas',
+    'Cumple con las normativas con nuestras soluciones RegTech',
     'Optimiza decisiones con análisis de datos y big data',
+    'Impulsa tu crecimiento con RomboWorks',
     'Seguridad y accesibilidad en banca móvil y en línea',
+    'Transforma tu empresa con herramientas de inteligencia artificial',
+    'Cumple con regulaciones y normativas con tecnología RegTech',
     'Descubre el poder de la visualización interactiva con big data'
   ];
   private images: string[] = [
-    './assets/Fondo4.webp',
-    './assets/digibank.webp',
-    './assets/iaimage.webp',
-    './assets/regtechb.webp',
-    './assets/bigdatab.webp',
-    './assets/Fondo2.webp',
+      './assets/Fondo4.webp',
+      './assets/digibank.webp',
+      './assets/iaimage.webp',
+      './assets/regtechb.webp',
+      './assets/bigdatab.webp',
+      './assets/Fondo2.webp',
+      './assets/digibankb.webp',
+      './assets/iab.webp',
+      './assets/regtecha.webp',
+      './assets/bigdataa.webp'
   ];
   private currentTextIndex: number = 0;
   private currentImageIndex: number = 0;
@@ -69,7 +76,7 @@ export class InicioComponent implements OnInit {
           'backgroundImage',
           `url(${this.images[this.currentImageIndex]})`
         );
-      }, 5000); // Cambiar cada 5 segundos
+      }, 3500); // Cambiar cada 5 segundos
     }
   }
 
@@ -90,7 +97,7 @@ export class InicioComponent implements OnInit {
           // Volver a mostrar el texto con opacidad 1
           this.renderer.setStyle(dynamicTextElement, 'opacity', '1');
         }, 500); // Espera el tiempo de la transición (0.5s)
-      }, 5000); // Cambiar cada 5 segundos
+      }, 3500); // Cambiar cada 5 segundos
     }
   }
 }
