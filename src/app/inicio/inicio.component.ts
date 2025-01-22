@@ -8,21 +8,27 @@ import * as AOS from 'aos';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  constructor(private router: Router, private renderer: Renderer2) {}
-
   private texts: string[] = [
     'Impulsa tu crecimiento con soluciones digitales de vanguardia',
     'Plataformas de banca digital que conectan con el futuro',
     'Automatiza procesos con inteligencia artificial y machine learning',
     'Cumple con las normativas con nuestras soluciones RegTech avanzadas',
     'Optimiza decisiones con análisis de datos y big data',
-    'Impulsa tu crecimiento con RomboWorks',
     'Seguridad y accesibilidad en banca móvil y en línea',
-    'Transforma tu empresa con herramientas de inteligencia artificial',
-    'Cumple con regulaciones y normativas con tecnología RegTech',
-    'Descubre el poder de la visualización interactiva con big data',
+    'Descubre el poder de la visualización interactiva con big data'
+  ];
+  private images: string[] = [
+    './assets/Fondo4.webp',
+    './assets/digibank.webp',
+    './assets/iaimage.webp',
+    './assets/regtechb.webp',
+    './assets/bigdatab.webp',
+    './assets/Fondo2.webp',
   ];
   private currentTextIndex: number = 0;
+  private currentImageIndex: number = 0;
+
+  constructor(private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.initBackgroundCarousel();
@@ -45,38 +51,23 @@ export class InicioComponent implements OnInit {
   }
 
   private initBackgroundCarousel() {
-    const images = [
-      './assets/Fondo4.webp',
-      './assets/digibank.webp',
-      './assets/iaimage.webp',
-      './assets/regtechb.webp',
-      './assets/bigdatab.webp',
-      './assets/Fondo2.webp',
-      './assets/digibankb.webp',
-      './assets/iab.webp',
-      './assets/regtecha.webp',
-      './assets/bigdataa.webp'
-
-    ];
-    let currentImageIndex = 0;
-
     const heroSection = document.querySelector('.hero-section') as HTMLElement;
     if (heroSection) {
       // Establecer la imagen inicial
       this.renderer.setStyle(
         heroSection,
         'backgroundImage',
-        `url(${images[currentImageIndex]})`
+        `url(${this.images[this.currentImageIndex]})`
       );
 
       setInterval(() => {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
+        this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
 
         // Cambiar la imagen de fondo con transición suave
         this.renderer.setStyle(
           heroSection,
           'backgroundImage',
-          `url(${images[currentImageIndex]})`
+          `url(${this.images[this.currentImageIndex]})`
         );
       }, 5000); // Cambiar cada 5 segundos
     }
@@ -102,5 +93,4 @@ export class InicioComponent implements OnInit {
       }, 5000); // Cambiar cada 5 segundos
     }
   }
-  
 }
