@@ -22,7 +22,26 @@ body {
     color: #00A0DE;
     font-size: 1rem; /* Ajusta el tamaño según lo necesario */
     font-weight: bold;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00A0DE;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   }
+
+  .contact-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
   
 
 /* HEADER */
@@ -250,6 +269,8 @@ body {
     font-size: 1rem;
     line-height: 1.6;
   }
+
+
   
 
   
