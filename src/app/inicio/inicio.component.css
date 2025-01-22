@@ -640,32 +640,60 @@ body {
 /*                 MEDIA QUERIES                      */
 /* -------------------------------------------------- */
 @media (max-width: 768px) {
-  /* Ajustes para la sección principal (Hero) */
-  
+  #dynamic-text-container {
+    min-height: 60px; /* Ajusta este valor al texto más alto que vayas a mostrar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #dynamic-text {
+    transition: opacity 0.5s ease-in-out;
+  }
+
   .hero-section {
-    background-size: 120%; /* Incrementa el tamaño del fondo */
-    height: auto; /* Ajusta la altura automáticamente */
-    padding: 50px 20px; /* Añade espacio interno si necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Asegúrate de mantener la altura completa */
   }
 
   .hero-title {
-    font-size: 5rem; /* Reduce el tamaño del título */
-    margin-bottom: 6rem; /* Ajusta el margen inferior */
+    font-size: 4.7rem; /* Reduce el tamaño en pantallas pequeñas */
+    margin-bottom: 2.5rem; /* Ajusta el margen */
   }
 
   .hero-title-thin {
-    font-size: 5rem; /* Coincide con el tamaño del título principal */
+    font-size: 4.7rem;
+    font-weight: 300;
   }
 
-   .hero-tagline {
-    font-size: 2rem; /* Ajusta el tamaño del subtítulo */
-    margin-bottom: 2rem; /* Reduce el margen inferior */
+  .hero-tagline {
+    font-size: 1.5rem; /* Ajusta el tamaño del subtítulo */
+    margin-bottom: 2rem; /* Ajusta el margen inferior */
   }
 
   .hero-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    position: relative;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #00142e;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
+  .hero-button:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #00A0DE !important;
+  }
+
 
   /* Servicios */
   .services-grid {
