@@ -642,6 +642,20 @@ body {
 /*                 MEDIA QUERIES                      */
 /* -------------------------------------------------- */
 @media (max-width: 768px) {
+  .feedback-logo img {
+    max-width: 120px; /* Tamaño máximo reducido para pantallas pequeñas */
+    min-width: 100px; /* Ajusta el tamaño mínimo */
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-logo img {
+    max-width: 100px; /* Tamaño más pequeño para pantallas muy pequeñas */
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
   #dynamic-text-container {
     min-height: 60px; /* Ajusta este valor al texto más alto que vayas a mostrar */
     display: flex;
