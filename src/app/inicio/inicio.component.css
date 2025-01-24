@@ -382,9 +382,12 @@ body {
 }
 
 .feedback-logo img {
-  max-width: 100px; 
-  height: auto; 
+  max-width: 200px; /* Tamaño máximo */
+  min-width: 150px; /* Tamaño mínimo para evitar desaparición */
+  height: auto; /* Mantiene la proporción */
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .feedback-header {
