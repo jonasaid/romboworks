@@ -24,6 +24,7 @@
     "aos": "^2.3.4",
     "romboworks": "file:",
     "rxjs": "~7.5.0",
+    "swiper": "^9.4.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

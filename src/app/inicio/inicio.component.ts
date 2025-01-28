@@ -1,6 +1,10 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+
+// Registrar los módulos necesarios
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 @Component({
   selector: 'app-inicio',
@@ -40,16 +44,55 @@ export class InicioComponent implements OnInit {
   constructor(private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
+    new Swiper('.swiper-container', {
+      loop: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // Configuración por defecto (pantallas muy grandes, si quieres)
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+  
+      // Breakpoints que adaptan tanto slidesPerView como slidesPerGroup
+      breakpoints: {
+        // A partir de 0px → 1 tarjeta y cambia de 1 en 1
+        0: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        // A partir de 480px → 2 tarjetas y cambia de 2 en 2
+        480: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        // A partir de 768px → 3 tarjetas y cambia de 3 en 3
+        768: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+  
+    // Resto de tu código...
     this.initBackgroundCarousel();
     this.initTextCarousel();
-
-    // Inicializar AOS para animaciones
     AOS.init({
-      duration: 800, // Duración de las animaciones (en ms)
-      once: true,    // Ejecutar las animaciones solo una vez
-      offset: 100,   // Distancia desde el viewport para activar las animaciones
+      duration: 800,
+      once: true,
+      offset: 100,
     });
   }
+  
 
   irAboutUs() {
     this.router.navigate(['/sobre-nosotros']);
@@ -77,7 +120,7 @@ export class InicioComponent implements OnInit {
     const heroSection = document.querySelector('.hero-section') as HTMLElement;
 
     if (heroSection) {
-      // Precargar imágenes
+      // Precarga de imágenes
       const preloadImage = (url: string) => {
         return new Promise((resolve) => {
           const img = new Image();
@@ -87,10 +130,10 @@ export class InicioComponent implements OnInit {
       };
 
       const changeBackgroundImage = async () => {
-        // Aplica la clase para desvanecer
+        // Fade Out
         this.renderer.addClass(heroSection, 'fade-out');
 
-        // Espera la precarga de la próxima imagen
+        // Esperar a la precarga
         await preloadImage(images[currentImageIndex]);
 
         // Cambia la imagen de fondo
@@ -100,15 +143,15 @@ export class InicioComponent implements OnInit {
           `url(${images[currentImageIndex]})`
         );
 
-        // Muestra la imagen con un desvanecimiento suave
+        // Fade In
         setTimeout(() => {
           this.renderer.removeClass(heroSection, 'fade-out');
           this.renderer.addClass(heroSection, 'fade-in');
 
-          // Remover la clase fade-in después de la transición para reutilizarla
+          // Remover fade-in después de la transición
           setTimeout(() => {
             this.renderer.removeClass(heroSection, 'fade-in');
-          }, 1000); // Duración de la transición en CSS
+          }, 1000);
         }, 100);
       };
 
@@ -119,10 +162,11 @@ export class InicioComponent implements OnInit {
         `url(${images[currentImageIndex]})`
       );
 
+      // Intervalo de cambio
       setInterval(async () => {
         currentImageIndex = (currentImageIndex + 1) % images.length;
         await changeBackgroundImage();
-      }, 4000); // Cambia cada 5 segundos
+      }, 4000);
     }
   }
 
@@ -131,19 +175,19 @@ export class InicioComponent implements OnInit {
 
     if (dynamicTextElement) {
       setInterval(() => {
-        // Reducir opacidad para el efecto de desvanecimiento
+        // Fade out
         this.renderer.setStyle(dynamicTextElement, 'opacity', '0');
 
         setTimeout(() => {
           this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
 
-          // Cambiar el texto después de reducir la opacidad
+          // Cambiar texto
           this.renderer.setProperty(dynamicTextElement, 'textContent', this.texts[this.currentTextIndex]);
 
-          // Volver a mostrar el texto con opacidad 1
+          // Fade in
           this.renderer.setStyle(dynamicTextElement, 'opacity', '1');
-        }, 500); // Espera el tiempo de la transición (0.5s)
-      }, 4000); // Cambiar cada 3.5 segundos
+        }, 500);
+      }, 4000);
     }
   }
 }
