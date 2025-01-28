@@ -372,106 +372,170 @@ body {
   gap: 1rem;
 }
 
-/* -------------------------------------------------- */
-/*               SECCIÓN DE FEEDBACK                  */
-/* -------------------------------------------------- */
+/* ------------------------------------------- */
+/*            SECCIÓN DE TESTIMONIOS          */
+/* ------------------------------------------- */
+
+/* Sección con padding reducido y ancho máximo */
 .feedback-section {
-  padding: 4rem 2rem;
-  background-color: #fff;
-  text-align: center;
+  padding: 2rem 1rem;       /* Menos espacio vertical/horizontal */
+  max-width: 2300px;        /* Sección más estrecha */
+  margin: 0 auto;           /* Centrada en la página */
+  text-align: center;       /* Centra el contenido de la cabecera */
 }
 
-.feedback-logo img {
-  max-width: 200px; /* Tamaño máximo */
-  min-width: 150px; /* Tamaño mínimo para evitar desaparición */
-  height: auto; /* Mantiene la proporción */
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-
+/* Título y subtítulo de la sección */
 .feedback-header {
   margin-bottom: 2rem;
 }
-
 .feedback-title {
   font-size: 2rem;
   font-weight: bold;
   color: #00A0DE;
 }
-
 .feedback-subtitle {
   font-size: 1rem;
   color: #666;
   margin-top: 0.5rem;
 }
 
-.feedback-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
 
-@media (min-width: 768px) {
-  .feedback-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
+/* ------------------------------------------- */
+/*               TARJETA (CARD)               */
+/* ------------------------------------------- */
 .feedback-card {
   border: 1px solid #e5e7eb;
   padding: 2rem;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Para posicionar nombre y logo de forma absoluta */
+  height: 350px; /* Un poco más alta para el contenido adicional */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Mantiene el contenido distribuido */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Efecto hover */
 .feedback-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Texto del testimonio */
 .feedback-text {
   font-size: 1rem;
   color: #333;
   font-style: italic;
   margin-bottom: 1.5rem;
 }
+
+/* Contenedor para nombre y logo */
 .feedback-client {
+  position: absolute;
+  bottom: 50px; /* Ubicado en la parte inferior de la tarjeta */
+  left: 30px;
+  right: 30px;
+
   display: flex;
-  align-items: center; /* Asegura que estén alineados verticalmente */
-  justify-content: space-between; /* Espacia el nombre y el logo uniformemente */
-  margin-top: 1rem;
-  height: 100px; /* Define una altura fija para asegurar alineación */
+  justify-content: space-between; /* Nombre a la izquierda, logo a la derecha */
+  align-items: center; /* Asegura que ambos elementos estén al mismo nivel vertical */
+  height: 70px; /* Incrementa la altura del contenedor */
 }
 
+/* Nombre de la empresa */
 .client-info {
   text-align: left;
-  flex: 1; /* Permite al texto ocupar espacio flexible */
+  flex: 1; /* Ocupa todo el espacio disponible */
 }
 
 .client-name {
-  font-size: 1rem;
+  font-size: 1.1rem; /* Más grande para destacar el nombre */
   font-weight: bold;
   color: #333;
-  margin: 0; /* Elimina márgenes innecesarios */
-  line-height: 1.5; /* Para mejorar la legibilidad */
+  margin: 0; /* Sin márgenes innecesarios */
+  line-height: 1.5;
+  white-space: nowrap; /* Evita que el texto pase a una nueva línea */
+  overflow: hidden; /* Oculta texto demasiado largo */
+  text-overflow: ellipsis; /* Añade "..." si el texto es muy largo */
 }
 
+/* Logo de la empresa */
 .feedback-logo {
-  flex: 0; /* Evita que el logo tome más espacio */
+  flex-shrink: 0; /* Evita que el logo cambie de tamaño */
   display: flex;
-  align-items: center; /* Centra el logo verticalmente */
-  justify-content: center; /* Centra el logo horizontalmente */
+  align-items: center; /* Centra verticalmente el logo */
+  justify-content: center;
 }
 
 .feedback-logo img {
-  max-width: 80px; /* Ajusta el tamaño máximo del logo */
+  max-width: 140px; /* Más grande para resaltar el logo */
   height: auto;
-  object-fit: contain;
+  object-fit: contain; /* Mantiene las proporciones del logo */
 }
 
+
+
+
+/* ------------------------------------------- */
+/*                SWIPER STYLES               */
+/* ------------------------------------------- */
+.swiper-container {
+  width: 100%;
+  overflow: hidden; /* Asegura que solo se vean las tarjetas visibles */
+}
+
+/* Centra la tarjeta en cada slide Swiper */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flechas de navegación */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #00A0DE;
+  position: absolute;
+  top: 60%;                    /* Centro vertical */
+  transform: translateY(-50%); /* Corrección para centrar verticalmente */
+  z-index: 10;                 /* Asegura que estén sobre las tarjetas */
+  width: 35px;                 /* Ajusta el tamaño de las flechas */
+  height: 35px;
+  cursor: pointer;
+}
+
+/* Mueve la flecha hacia la izquierda (fuera del contenedor) */
+.swiper-button-prev {
+  left: -60px; /* Cambia este valor para moverla más o menos hacia la izquierda */
+}
+
+/* Mueve la flecha hacia la derecha (fuera del contenedor) */
+.swiper-button-next {
+  right: -60px; /* Cambia este valor para moverla más o menos hacia la derecha */
+}
+
+/* Hover (opcional) */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #00142e; /* Cambia de color al pasar el mouse */
+}
+
+/* Paginación */
+.swiper-pagination-bullet {
+  background: #00A0DE;
+}
+
+/* Breakpoints para dispositivos pequeños */
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    left: 10px; /* Ajusta las flechas más cerca del contenedor */
+  }
+  .swiper-button-next {
+    right: 10px; /* Ajusta las flechas más cerca del contenedor */
+  }
+}
 
 
 

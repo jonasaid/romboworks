@@ -5,7 +5,7 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": true,                       // Mantén esta opción para un chequeo estricto
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -20,11 +20,16 @@
     "module": "es2020",
     "allowSyntheticDefaultImports": true, // Permite importaciones predeterminadas para módulos CommonJS
     "esModuleInterop": true,              // Recomendado para interoperabilidad con módulos CommonJS
+    "skipLibCheck": true,                 // Omitir chequeo de tipos en las bibliotecas
     "lib": [
       "es2020",
       "dom"
     ]
   },
+  "include": [
+    "src",          
+    "src/types"      
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
