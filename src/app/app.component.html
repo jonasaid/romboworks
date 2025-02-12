@@ -1,78 +1,87 @@
+<!-- Contenedor principal que utiliza flex para organizar el contenido en columna y ocupar toda la altura de la pantalla -->
 <div class="flex flex-col min-h-screen">
-  <mat-toolbar
-  style="background-color: #101720; color: white;"
-  class="text-white flex justify-between px-4 py-2 min-h-[70px] md:min-h-[100px] items-center"
->
-    <!-- Logo y Menú -->
-    <div class="flex items-center space-x-6">
-      <button
-  class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center group"
-  (click)="toggleMenu()"
->
-  <span
-    class="block w-8 h-1 bg-white rounded transition-transform duration-300 ease-in-out"
-    [class.rotate-45]="isMenuOpen"
-    [class.translate-y-2]="isMenuOpen"
-  ></span>
-  <span
-    class="block w-8 h-1 bg-white rounded transition-opacity duration-300 ease-in-out my-1"
-    [class.opacity-0]="isMenuOpen"
-  ></span>
-  <span
-    class="block w-8 h-1 bg-white rounded transition-transform duration-300 ease-in-out"
-    [class.-rotate-45]="isMenuOpen"
-    [class.-translate-y-2]="isMenuOpen"
-  ></span>
-</button>
 
-        <button routerLink="/inicio">
-          <img src="/assets/Imagotipo_logorombo.png" alt="Rombo Works Logo" class="h-12 md:h-20" />
-        </button>
+  <!-- Barra de herramientas superior utilizando Angular Material (mat-toolbar) -->
+  <mat-toolbar
+    style="background-color: #101720; color: white;"
+    class="text-white flex justify-between px-4 py-2 min-h-[70px] md:min-h-[100px] items-center"
+  >
+    <!-- Sección de Logo y botón de menú para dispositivos pequeños -->
+    <div class="flex items-center space-x-6">
+      <!-- Botón de menú hamburguesa visible solo en dispositivos pequeños (md:hidden) -->
+      <button
+        class="md:hidden relative w-8 h-8 flex flex-col justify-center items-center group"
+        (click)="toggleMenu()"
+      >
+        <!-- Primera línea del icono hamburguesa -->
+        <span
+          class="block w-8 h-1 bg-white rounded transition-transform duration-300 ease-in-out"
+          [class.rotate-45]="isMenuOpen"
+          [class.translate-y-2]="isMenuOpen"
+        ></span>
+        <!-- Segunda línea del icono hamburguesa (oculta cuando el menú está abierto) -->
+        <span
+          class="block w-8 h-1 bg-white rounded transition-opacity duration-300 ease-in-out my-1"
+          [class.opacity-0]="isMenuOpen"
+        ></span>
+        <!-- Tercera línea del icono hamburguesa -->
+        <span
+          class="block w-8 h-1 bg-white rounded transition-transform duration-300 ease-in-out"
+          [class.-rotate-45]="isMenuOpen"
+          [class.-translate-y-2]="isMenuOpen"
+        ></span>
+      </button>
+
+      <!-- Botón que redirige a la página de inicio al hacer clic en el logo -->
+      <button routerLink="/inicio">
+        <img src="/assets/Imagotipo_logorombo.png" alt="Rombo Works Logo" class="h-12 md:h-20" />
+      </button>
     </div>
       
-  
-    <!-- Menú principal (visible en pantallas medianas y grandes) -->
-<div class="hidden md:flex items-center space-x-6">
-    <button mat-button routerLink="/inicio" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Inicio</span>
-    </button>
-    <button mat-button routerLink="/servicios" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Servicios</span>
-    </button>
-    <button mat-button routerLink="/contacto" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Contacto</span>
-    </button>
-    <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Nosotros</span>
-    </button>
-  </div>
+    <!-- Menú principal visible en pantallas medianas y grandes (oculto en dispositivos pequeños) -->
+    <div class="hidden md:flex items-center space-x-6">
+      <!-- Botón de navegación a "Inicio" -->
+      <button mat-button routerLink="/inicio" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Inicio</span>
+      </button>
+      <!-- Botón de navegación a "Servicios" -->
+      <button mat-button routerLink="/servicios" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Servicios</span>
+      </button>
+      <!-- Botón de navegación a "Contacto" -->
+      <button mat-button routerLink="/contacto" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Contacto</span>
+      </button>
+      <!-- Botón de navegación a "Nosotros" -->
+      <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Nosotros</span>
+      </button>
+    </div>
   
   </mat-toolbar>
   
   <!-- Menú desplegable para pantallas pequeñas -->
   <div
-  class="md:hidden bg-gray-800 text-white overflow-hidden transition-all duration-500 ease-in-out"
-  [style.maxHeight]="isMenuOpen ? '400px' : '0'"
->
-  <button mat-button routerLink="/inicio" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Inicio</button>
-  <button mat-button routerLink="/servicios" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Servicios</button>
-  <button mat-button routerLink="/contacto" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Contacto</button>
-  <button mat-button routerLink="/sobre-nosotros" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Sobre Nosotros</button>
-</div>
+    class="md:hidden bg-gray-800 text-white overflow-hidden transition-all duration-500 ease-in-out"
+    [style.maxHeight]="isMenuOpen ? '400px' : '0'"
+  >
+    <!-- Cada botón del menú despliega un enlace a una sección de la aplicación -->
+    <button mat-button routerLink="/inicio" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Inicio</button>
+    <button mat-button routerLink="/servicios" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Servicios</button>
+    <button mat-button routerLink="/contacto" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Contacto</button>
+    <button mat-button routerLink="/sobre-nosotros" class="w-full text-left px-4 py-2 hover:text-blue-400 hover:scale-105 transition duration-300 text-lg">Sobre Nosotros</button>
+  </div>
 
- <!-- Contenido de las páginas -->
+  <!-- Contenedor principal del contenido de las páginas (dinámicamente renderizado por Angular) -->
   <div class="flex-grow">
     <router-outlet></router-outlet>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer: Sección final con información legal y navegación básica -->
   <footer class="footer bg-white py-4 text-center border-t border-gray-200">
     <div class="footer-legal text-gray-600 text-sm flex flex-col md:flex-row justify-center items-center space-x-2">
       <p class="mb-0 md:mb-0">© 2025 Rombo Works. Todos los derechos reservados.</p>
     </div>
   </footer>
   
-
 </div>
-  
-  

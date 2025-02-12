@@ -1,5 +1,8 @@
-<!-- Sección de contacto -->
+<!-- Sección de Faqs -->
+<!-- Contenedor principal para la sección de contacto, con layout flexible para dispositivos móviles y de escritorio -->
 <div class="flex flex-col md:flex-row gap-8 bg-white p-16 rounded-lg" data-aos="fade-up">
+  <!-- Contenedor de la imagen -->
+  <!-- Muestra una imagen representativa para invitar al usuario a contactar -->
   <div class="flex-1 flex justify-center items-center">
     <img
       src="./assets/ContacUS.jpg"
@@ -7,27 +10,35 @@
       class="max-w-full max-h-96 object-contain rounded-lg shadow-md"
     />
   </div>
+  <!-- Contenedor del contenido textual y del formulario de contacto -->
   <div class="flex-1">
+    <!-- Título de la sección -->
     <p class="text-rombo-blue text-3xl font-extrabold mb-4">Contáctanos</p>
+    <!-- Descripción breve invitando al usuario a enviar su mensaje -->
     <p class="text-gray-600 text-base mb-6">
       Estamos aquí para resolver tus dudas y apoyarte en lo que necesites.
     </p>
+    <!-- Formulario de contacto -->
     <form class="grid grid-cols-1 gap-4">
+      <!-- Campo para ingresar el nombre del usuario -->
       <input
         type="text"
         placeholder="Nombre"
         class="p-3 border border-gray-300 rounded-lg"
       />
+      <!-- Campo para ingresar el correo electrónico del usuario -->
       <input
         type="email"
         placeholder="Correo Electrónico"
         class="p-3 border border-gray-300 rounded-lg"
       />
+      <!-- Área de texto para que el usuario escriba su mensaje -->
       <textarea
         rows="4"
         placeholder="Mensaje"
         class="p-3 border border-gray-300 rounded-lg"
       ></textarea>
+      <!-- Botón para enviar el formulario -->
       <button
         type="submit"
         class="bg-rombo-blue text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
@@ -37,12 +48,18 @@
     </form>
   </div>
 </div>
+
 <!-- Sección del mapa y datos de contacto -->
+<!-- Contenedor que agrupa los datos de contacto y un mapa de Google Maps -->
 <div class="bg-white py-16 px-16" data-aos="fade-up">
   <div class="container mx-auto px-4 flex flex-col md:flex-row gap-8">
+    <!-- Columna con los datos de contacto -->
     <div class="flex-1">
+      <!-- Título de la sección de datos de contacto -->
       <p class="text-rombo-blue text-3xl font-extrabold mb-4">Datos de Contacto</p>
+      <!-- Lista de datos de contacto con íconos -->
       <div class="space-y-6">
+        <!-- Información de correo electrónico -->
         <div class="flex items-start space-x-4">
           <span class="material-icons text-blue-500 text-2xl">email</span>
           <div>
@@ -51,7 +68,7 @@
             <a href="mailto:ismael.hdz.m@gmail.com" class="text-blue-500 hover:underline">Enviar correo</a>
           </div>
         </div>
-
+        <!-- Información de teléfono -->
         <div class="flex items-start space-x-4">
           <span class="material-icons text-blue-500 text-2xl">phone</span>
           <div>
@@ -59,7 +76,7 @@
             <p class="text-gray-600">+52 (55) 5435-8479</p>
           </div>
         </div>
-
+        <!-- Información de la ubicación física (oficina) -->
         <div class="flex items-start space-x-4">
           <span class="material-icons text-blue-500 text-2xl">place</span>
           <div>
@@ -69,30 +86,46 @@
         </div>
       </div>
     </div>
+    <!-- Columna con el mapa -->
+    <!-- Contenedor que incluye un iframe con el mapa de Google Maps -->
     <div class="flex-1 flex justify-center items-center bg-white rounded-lg">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481729.04855758674!2d-99.47327143501768!3d19.390436594470376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1737081908833!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481729.04855758674!2d-99.47327143501768!3d19.390436594470376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1737081908833!5m2!1ses!2smx" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </div>
 
+<!-- Sección de Preguntas Frecuentes (FAQ) -->
+<!-- Contenedor principal que organiza la sección de FAQs en dos columnas -->
 <div class="container mx-auto py-16 px-16 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
-  <!-- Columna izquierda -->
+  <!-- Columna izquierda: título y descripción de la sección FAQ -->
   <div class="flex flex-col justify-center">
+    <!-- Título principal para la sección de preguntas frecuentes -->
     <p class="text-3xl md:text-5xl font-extrabold text-rombo-blue mb-4">Preguntas Frecuentes</p>
+    <!-- Breve descripción que invita a leer las preguntas -->
     <p class="text-gray-600 text-lg md:text-2xl">
       Encuentra las respuestas a tus dudas sobre nuestras soluciones tecnológicas.
     </p>
   </div>
 
-  <!-- Columna derecha -->
+  <!-- Columna derecha: listado de preguntas y respuestas interactivas -->
   <div class="space-y-4">
     <!-- Pregunta 1 -->
     <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <!-- Encabezado de la pregunta con evento click para mostrar/ocultar la respuesta -->
       <div 
         class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
         (click)="toggleQuestion(1)"
       >
         <span>¿Qué es RegTech?</span>
+        <!-- Icono que rota al cambiar el estado de la pregunta -->
         <span
           class="material-icons text-rombo-blue transform transition-transform duration-300"
           [class.rotate-180]="openQuestions[1]"
@@ -100,6 +133,7 @@
           expand_more
         </span>
       </div>
+      <!-- Contenedor de la respuesta, con transición para mostrar u ocultar su contenido -->
       <div 
         class="overflow-hidden transition-all duration-700"
         [style.maxHeight]="openQuestions[1] ? '300px' : '0'"
@@ -112,11 +146,13 @@
 
     <!-- Pregunta 2 -->
     <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <!-- Encabezado de la pregunta con funcionalidad para alternar la visibilidad de la respuesta -->
       <div 
         class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
         (click)="toggleQuestion(2)"
       >
         <span>¿Cómo la IA puede ayudarnos?</span>
+        <!-- Icono interactivo que rota según el estado de la respuesta -->
         <span
           class="material-icons text-rombo-blue transform transition-transform duration-300"
           [class.rotate-180]="openQuestions[2]"
@@ -124,6 +160,7 @@
           expand_more
         </span>
       </div>
+      <!-- Contenedor de la respuesta con transición de altura para efecto de deslizamiento -->
       <div 
         class="overflow-hidden transition-all duration-700"
         [style.maxHeight]="openQuestions[2] ? '300px' : '0'"
@@ -136,11 +173,13 @@
 
     <!-- Pregunta 3 -->
     <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <!-- Encabezado de la pregunta con funcionalidad de toggle -->
       <div 
         class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
         (click)="toggleQuestion(3)"
       >
         <span>¿Qué es la banca digital?</span>
+        <!-- Icono que rota al hacer click, indicando cambio de estado -->
         <span
           class="material-icons text-rombo-blue transform transition-transform duration-300"
           [class.rotate-180]="openQuestions[3]"
@@ -148,6 +187,7 @@
           expand_more
         </span>
       </div>
+      <!-- Contenedor de la respuesta con transición para una apertura y cierre suaves -->
       <div 
         class="overflow-hidden transition-all duration-700"
         [style.maxHeight]="openQuestions[3] ? '300px' : '0'"
@@ -160,11 +200,13 @@
 
     <!-- Pregunta 4 -->
     <div class="bg-gray-100 p-4 rounded-lg shadow-md transition-all duration-300">
+      <!-- Encabezado interactivo de la pregunta -->
       <div 
         class="text-xl font-bold text-gray-800 cursor-pointer flex items-center justify-between"
         (click)="toggleQuestion(4)"
       >
         <span>¿Qué es Big Data?</span>
+        <!-- Icono que se rota para indicar la apertura o cierre de la respuesta -->
         <span
           class="material-icons text-rombo-blue transform transition-transform duration-300"
           [class.rotate-180]="openQuestions[4]"
@@ -172,6 +214,7 @@
           expand_more
         </span>
       </div>
+      <!-- Contenedor que muestra u oculta la respuesta con una animación de deslizamiento -->
       <div 
         class="overflow-hidden transition-all duration-700"
         [style.maxHeight]="openQuestions[4] ? '300px' : '0'"
@@ -184,37 +227,42 @@
   </div>
 </div>
 
-<!-- Sección final -->
+<!-- Sección final (Footer) -->
+<!-- Contenedor que funciona como pie de página, incluyendo logo, menú de navegación y enlaces a redes sociales -->
 <div class="bg-white py-8">
   <div
     class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
   >
-    <!-- Logo -->
+    <!-- Logo de la marca o empresa -->
     <div>
       <button routerLink="/inicio">
-      <img
-        src="./assets/rombo-works-logo.png"
-        alt="Rombo Works Logo"
-        class="h-20 md:h-32"
-      />
+        <img
+          src="./assets/rombo-works-logo.png"
+          alt="Rombo Works Logo"
+          class="h-20 md:h-32"
+        />
       </button>
     </div>
 
-    <!-- Menú de navegación -->
+    <!-- Menú de navegación principal -->
     <nav class="flex flex-wrap justify-center gap-4">
-       <button mat-button routerLink="/servicios" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Servicios</span>
-    </button>
-    <button mat-button routerLink="/faqs" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Contacto</span>
-    </button>
-    <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Nosotros</span>
-    </button>
+      <!-- Botón de navegación a la sección de Servicios -->
+      <button mat-button routerLink="/servicios" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Servicios</span>
+      </button>
+      <!-- Botón de navegación a la sección de Contacto -->
+      <button mat-button routerLink="/faqs" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Contacto</span>
+      </button>
+      <!-- Botón de navegación a la sección de Nosotros -->
+      <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+        <span>Nosotros</span>
+      </button>
     </nav>
 
-    <!-- Redes sociales -->
+    <!-- Enlaces a redes sociales -->
     <div class="flex justify-center gap-4 text-blue-600 py-4">
+      <!-- Enlace al perfil de LinkedIn -->
       <a
         href="https://www.linkedin.com/in/ismael-hernandez-monroy/"
         class="hover:opacity-70 text-6xl"

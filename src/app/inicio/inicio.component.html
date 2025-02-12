@@ -1,256 +1,317 @@
+<!-- 
+  Sección de Hero: Contiene el banner principal con el nombre de la marca, un eslogan dinámico y un botón de llamada a la acción.
+-->
 <section class="hero-section">
     <div class="hero-content">
+      <!-- Título principal con énfasis en "RomboWorks" -->
       <h3 class="hero-title text-6xl font-bold">
         Rombo<span class="hero-title-thin">Works</span>
       </h3>
+      <!-- Contenedor para el texto dinámico (tagline) -->
       <div id="dynamic-text-container">
         <h2 id="dynamic-text" class="hero-tagline text-lg font-medium">
           Impulsa tu crecimiento con soluciones digitales de vanguardia
         </h2>
       </div>
+      <!-- Botón de llamada a la acción que invoca la función irAboutUs() al hacer clic -->
       <button mat-button class="hero-button" (click)="irAboutUs()">¡Conócenos!</button>
     </div>
   </section>
   
+  <!-- 
+    Sección de Servicios: Presenta las diferentes soluciones y servicios que ofrece la empresa.
+    Incluye tarjetas para cada servicio con un ícono, título, descripción y un botón para más información.
+  -->
+  <section class="services-section" data-aos="fade-up">
+    <div class="services-header">
+      <!-- Lema o tagline descriptivo de la sección -->
+      <p class="services-tagline">Soluciones de Alto Impacto</p>
+      <!-- Título principal de la sección -->
+      <h2 class="services-title">Transformando la Industria Financiera</h2>
+      <!-- Subtítulo que amplía la información sobre el servicio ofrecido -->
+      <p class="services-subtitle">
+        Descubre cómo nuestras soluciones potencian la eficiencia y seguridad de tu negocio.
+      </p>
+    </div>
   
-
+    <!-- Contenedor de tarjetas de servicio en formato de cuadrícula -->
+    <div class="services-grid">
+      <!-- Tarjeta del primer servicio -->
+      <div class="service-card">
+        <div class="service-icon">
+          <span class="material-icons">apps</span>
+        </div>
+        <h3 class="service-title">Servicios Principales</h3>
+        <p class="service-description">
+          Creamos soluciones personalizadas que abordan los desafíos únicos del sector financiero, 
+          optimizando tus operaciones y aportando valor a cada cliente.
+        </p>
+        <div class="service-actions">
+          <!-- Botón que redirige a la sección de servicios mediante la función irServices() -->
+          <button class="btn btn-secondary" (click)="irServices()">   
+            <span class="material-icons">arrow_forward</span>
+            Más Información
+          </button>
+        </div>
+      </div>
   
-    <!-- Sección de Servicios -->
-    <section class="services-section" data-aos="fade-up">
-        <div class="services-header">
-            <p class="services-tagline">Soluciones de Alto Impacto</p>
-            <h2 class="services-title">Transformando la Industria Financiera</h2>
-            <p class="services-subtitle">Descubre cómo nuestras soluciones potencian la eficiencia y seguridad de tu negocio.</p>
+      <!-- Tarjeta del segundo servicio -->
+      <div class="service-card">
+        <div class="service-icon">
+          <span class="material-icons">account_balance</span>
         </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <span class="material-icons">apps</span>
-                </div>
-                <h3 class="service-title">Servicios Principales</h3>
-                <p class="service-description">
-                    Creamos soluciones personalizadas que abordan los desafíos únicos del sector financiero, 
-                    optimizando tus operaciones y aportando valor a cada cliente.
-                </p>
-                <div class="service-actions">
-                    <button class="btn btn-secondary" (click)="irServices()">   
-                        <span class="material-icons">arrow_forward</span>
-                        Más Información
-                        
-                    </button>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <span class="material-icons">account_balance</span>
-                </div>
-                <h3 class="service-title">Plataformas de Banca Digital</h3>
-                <p class="service-description">
-                    Soluciones intuitivas y seguras para optimizar la experiencia bancaria en línea y móvil.
-                </p>
-                <div class="service-actions">
-                    <button class="btn btn-secondary" (click)="irServices()"> 
-                        <span class="material-icons">arrow_forward</span>
-                        Más Información 
-                    </button>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">
-                    <span class="material-icons">insights</span>
-                </div>
-                <h3 class="service-title">IA & Machine Learning</h3>
-                <p class="service-description">
-                    Aprovecha el poder de los datos para tomar decisiones financieras inteligentes y personalizadas.
-                </p>
-                <div class="service-actions">
-                    <button class="btn btn-secondary" (click)="irServices()">
-                        <span class="material-icons">arrow_forward</span>
-                        Más Información    
-                    </button>
-                </div>
-            </div>
+        <h3 class="service-title">Plataformas de Banca Digital</h3>
+        <p class="service-description">
+          Soluciones intuitivas y seguras para optimizar la experiencia bancaria en línea y móvil.
+        </p>
+        <div class="service-actions">
+          <!-- Botón que redirige a la sección de servicios mediante la función irServices() -->
+          <button class="btn btn-secondary" (click)="irServices()"> 
+            <span class="material-icons">arrow_forward</span>
+            Más Información 
+          </button>
         </div>
-    </section>
-
-    <!-- Sección de artículos o noticias -->
-    <section class="hero-potential" data-aos="fade-up">
-        <div class="hero-text">
-            <p class="services-tagline">Inspírate</p>
-            <h2 class="services-title">Conoce las novedades de Rombo Works</h2>
-            <p class="services-subtitle">Mantente actualizado con las últimas tendencias, innovaciones y logros de Rombo Works en la transformación digital del sector financiero</p>
-        </div>   
-        <div class="card-container">
-            <a [routerLink]="'/articulo1'" class="card">
-                <img src="./assets/1.webp" alt="Article 1 Image" class="card-image">
-                <div class="card-content">
-                    <p class="card-date">2025-01-07</p>
-                    <h3 class="card-title">Transformación Digital en el Sector Bancario</h3>
-                    <p class="card-description">Descubre cómo Rombo Works impulsa la digitalización de la banca 
-                        a través de herramientas escalables y seguras.</p>
-                </div>
-            </a>
-            
-            <a [routerLink]="'/articulo2'" class="card">
-                <img src="./assets/2.webp" alt="Article 2 Image" class="card-image">
-                <div class="card-content">
-                    <p class="card-date">2024-10-12</p>
-                    <h3 class="card-title">Inteligencia Artificial para la Prevención de Fraudes</h3>
-                    <p class="card-description">Conoce cómo optimizamos la seguridad financiera con modelos de IA 
-                        que detectan actividades sospechosas en tiempo real.</p>
-                </div>
-            </a>
-            
-            <a [routerLink]="'/articulo3'" class="card">
-                <img src="./assets/3.webp" alt="Article 3 Image" class="card-image">
-                <div class="card-content">
-                    <p class="card-date">2024-05-06</p>
-                    <h3 class="card-title">Alianzas Estratégicas Globales</h3>
-                    <p class="card-description">Conoce nuestro último evento de lanzamiento y las nuevas alianzas 
-                        que potencian la innovación continua en finanzas.</p>
-                </div>
-            </a>
+      </div>
+  
+      <!-- Tarjeta del tercer servicio -->
+      <div class="service-card">
+        <div class="service-icon">
+          <span class="material-icons">insights</span>
         </div>
-    </section>
-
-     <!-- Sección de Testimonios -->
-    <section class="feedback-section" data-aos="fade-up">
-        <div class="feedback-header">
-          <h2 class="feedback-title">Alianzas Estratégicas y Conexiones Globales</h2>
-          <p class="feedback-subtitle">
-            Colaboramos con organizaciones líderes que valoran la innovación y la excelencia financiera.
+        <h3 class="service-title">IA & Machine Learning</h3>
+        <p class="service-description">
+          Aprovecha el poder de los datos para tomar decisiones financieras inteligentes y personalizadas.
+        </p>
+        <div class="service-actions">
+          <!-- Botón que redirige a la sección de servicios mediante la función irServices() -->
+          <button class="btn btn-secondary" (click)="irServices()">
+            <span class="material-icons">arrow_forward</span>
+            Más Información    
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 
+    Sección de Artículos o Noticias: Muestra tarjetas de contenido que destacan novedades, artículos o noticias relevantes.
+    Cada tarjeta incluye una imagen, fecha, título y breve descripción, y redirige a la ruta correspondiente.
+  -->
+  <section class="hero-potential" data-aos="fade-up">
+    <div class="hero-text">
+      <!-- Tagline para incentivar la inspiración -->
+      <p class="services-tagline">Inspírate</p>
+      <!-- Título principal de la sección -->
+      <h2 class="services-title">Conoce las novedades de Rombo Works</h2>
+      <!-- Subtítulo descriptivo de la sección -->
+      <p class="services-subtitle">
+        Mantente actualizado con las últimas tendencias, innovaciones y logros de Rombo Works en la transformación 
+        digital del sector financiero
+      </p>
+    </div>   
+    <!-- Contenedor de tarjetas de artículo -->
+    <div class="card-container">
+      <!-- Tarjeta de Artículo 1 -->
+      <a [routerLink]="'/articulo1'" class="card">
+        <img src="./assets/1.webp" alt="Article 1 Image" class="card-image">
+        <div class="card-content">
+          <p class="card-date">2025-01-07</p>
+          <h3 class="card-title">Transformación Digital en el Sector Bancario</h3>
+          <p class="card-description">
+            Descubre cómo Rombo Works impulsa la digitalización de la banca 
+            a través de herramientas escalables y seguras.
           </p>
         </div>
+      </a>
       
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-             
-                <!-- Testimonio 1 -->
-                    <div class="swiper-slide feedback-card">
-                    <p class="feedback-text">"Excelentes socios para atender el segmento de pagos internacionales en nuestra región."</p>
-                    <div class="feedback-client">
-                        <div class="client-info">
-                            <p class="client-name">Automatiza</p>
-                        </div>
-                        <div class="feedback-logo">
-                            <img src="./assets/automatiza.PNG" alt="Automatiza Logo">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 2 -->
-                <div class="swiper-slide feedback-card">
-                    <p class="feedback-text">"Socios estratégicos en México para expandir nuestro mercado."</p>
-                    <div class="feedback-client">
-                        <div class="client-info">
-                            <p class="client-name">BIMEX Analytics</p>
-                        </div>
-                        <div class="feedback-logo">
-                            <img src="./assets/bimex_analytics_logo.jpeg" alt="BIMEX Logo">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 3 -->
-                <div class="swiper-slide feedback-card">
-                    <p class="feedback-text">"La integración de mensajería Swift y adaptación de ISO 20022 es ahora."</p>
-                    <div class="feedback-client">
-                        <div class="client-info">
-                            <p class="client-name">ECS Fin</p>
-                        </div>
-                        <div class="feedback-logo">
-                            <img src="./assets/ecs.png" alt="ECS Fin Logo">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 4 -->
-                <div class="swiper-slide feedback-card">
-                    <p class="feedback-text">"Un socio tecnológico que nos acerca a nuestros clientes en Latam, con equipos con experiencia y conocimientos sólidos."</p>
-                    <div class="feedback-client">
-                        <div class="client-info">
-                            <p class="client-name">LeanXcale</p>
-                        </div>
-                        <div class="feedback-logo">
-                            <img src="./assets/lean.png" alt="LeanXcale Logo">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 5 -->
-                <div class="swiper-slide feedback-card">
-                    <p class="feedback-text">"Aliado para integrar la innovación en IA dentro de nuestros productos y quien gana son nuestros clientes."</p>
-                    <div class="feedback-client">
-                        <div class="client-info">
-                            <p class="client-name">Neaxis</p>
-                        </div>
-                        <div class="feedback-logo">
-                            <img src="./assets/neaxis.png" alt="Neaxis Logo">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 6 -->
-                <div class="swiper-slide feedback-card">
-                    <p class="feedback-text">"Las alianzas siempre son necesarias en el sector cuando se trata de extender la oferta de servicios."</p>
-                    <div class="feedback-client">
-                        <div class="client-info">
-                            <p class="client-name">Nova Solutions</p>
-                        </div>
-                        <div class="feedback-logo">
-                            <img src="./assets/novalogo.PNG" alt="Nova Logo" class="nova-logo">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 7 -->
-                <div class="swiper-slide feedback-card">
-                    <p class="feedback-text">"Encontramos un aliado para expandir nuestra operación en Latam."</p>
-                    <div class="feedback-client">
-                        <div class="client-info">
-                            <p class="client-name">Valantic</p>
-                        </div>
-                        <div class="feedback-logo">
-                            <img src="./assets/valantic.jpeg" alt="Valantic Logo">
-                        </div>
-                    </div>
-                </div>
-          </div>
-      
-          <!-- Controles de navegación -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-      
-          <!-- Paginación -->
-          <div class="swiper-pagination"></div>
+      <!-- Tarjeta de Artículo 2 -->
+      <a [routerLink]="'/articulo2'" class="card">
+        <img src="./assets/2.webp" alt="Article 2 Image" class="card-image">
+        <div class="card-content">
+          <p class="card-date">2024-10-12</p>
+          <h3 class="card-title">Inteligencia Artificial para la Prevención de Fraudes</h3>
+          <p class="card-description">
+            Conoce cómo optimizamos la seguridad financiera con modelos de IA 
+            que detectan actividades sospechosas en tiempo real.
+          </p>
         </div>
+      </a>
+      
+      <!-- Tarjeta de Artículo 3 -->
+      <a [routerLink]="'/articulo3'" class="card">
+        <img src="./assets/3.webp" alt="Article 3 Image" class="card-image">
+        <div class="card-content">
+          <p class="card-date">2024-05-06</p>
+          <h3 class="card-title">Alianzas Estratégicas Globales</h3>
+          <p class="card-description">
+            Conoce nuestro último evento de lanzamiento y las nuevas alianzas 
+            que potencian la innovación continua en finanzas.
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <!-- 
+    Sección de Testimonios: Presenta opiniones y comentarios de clientes y aliados estratégicos a través de un slider.
+    Utiliza la librería Swiper para la navegación, paginación y controles de desplazamiento.
+  -->
+  <section class="feedback-section" data-aos="fade-up">
+    <div class="feedback-header">
+      <!-- Título principal de la sección de testimonios -->
+      <h2 class="feedback-title">Alianzas Estratégicas y Conexiones Globales</h2>
+      <!-- Subtítulo que contextualiza la importancia de las alianzas -->
+      <p class="feedback-subtitle">
+        Colaboramos con organizaciones líderes que valoran la innovación y la excelencia financiera.
+      </p>
+    </div>
+  
+    <!-- Contenedor del slider de testimonios -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
         
-      </section>
-      
-    <!-- Sección de Llamado a la Acción -->
-    <section class="financial-experience-box" data-aos="fade-up">
-        <div class="financial-box-content">
-            <h2 class="financial-title">¡Eleva tu Experiencia Financiera!</h2>
-            <p class="financial-description">
-                Ponte en contacto con nuestro equipo y descubre cómo podemos impulsar tu futuro digital en finanzas.
-            </p>
-            <div class="financial-buttons">
-                <button class="btn btn-secondary" (click)="irAboutUs()">Saber Más</button>
+        <!-- Testimonio 1 -->
+        <div class="swiper-slide feedback-card">
+          <p class="feedback-text">
+            "Excelentes socios para atender el segmento de pagos internacionales en nuestra región."
+          </p>
+          <div class="feedback-client">
+            <div class="client-info">
+              <p class="client-name">Automatiza</p>
             </div>
+            <div class="feedback-logo">
+              <img src="./assets/automatiza.PNG" alt="Automatiza Logo">
+            </div>
+          </div>
         </div>
-        <div class="financial-box-image">
-            <img src="./assets/secretaria.jpeg" alt="Financial Experience" class="financial-image">
+  
+        <!-- Testimonio 2 -->
+        <div class="swiper-slide feedback-card">
+          <p class="feedback-text">
+            "Socios estratégicos en México para expandir nuestro mercado."
+          </p>
+          <div class="feedback-client">
+            <div class="client-info">
+              <p class="client-name">BIMEX Analytics</p>
+            </div>
+            <div class="feedback-logo">
+              <img src="./assets/bimex_analytics_logo.jpeg" alt="BIMEX Logo">
+            </div>
+          </div>
         </div>
-    </section>
-
-    
-  <!-- Sección final -->
+  
+        <!-- Testimonio 3 -->
+        <div class="swiper-slide feedback-card">
+          <p class="feedback-text">
+            "La integración de mensajería Swift y adaptación de ISO 20022 es ahora."
+          </p>
+          <div class="feedback-client">
+            <div class="client-info">
+              <p class="client-name">ECS Fin</p>
+            </div>
+            <div class="feedback-logo">
+              <img src="./assets/ecs.png" alt="ECS Fin Logo">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Testimonio 4 -->
+        <div class="swiper-slide feedback-card">
+          <p class="feedback-text">
+            "Un socio tecnológico que nos acerca a nuestros clientes en Latam, con equipos con experiencia y conocimientos sólidos."
+          </p>
+          <div class="feedback-client">
+            <div class="client-info">
+              <p class="client-name">LeanXcale</p>
+            </div>
+            <div class="feedback-logo">
+              <img src="./assets/lean.png" alt="LeanXcale Logo">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Testimonio 5 -->
+        <div class="swiper-slide feedback-card">
+          <p class="feedback-text">
+            "Aliado para integrar la innovación en IA dentro de nuestros productos y quien gana son nuestros clientes."
+          </p>
+          <div class="feedback-client">
+            <div class="client-info">
+              <p class="client-name">Neaxis</p>
+            </div>
+            <div class="feedback-logo">
+              <img src="./assets/neaxis.png" alt="Neaxis Logo">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Testimonio 6 -->
+        <div class="swiper-slide feedback-card">
+          <p class="feedback-text">
+            "Las alianzas siempre son necesarias en el sector cuando se trata de extender la oferta de servicios."
+          </p>
+          <div class="feedback-client">
+            <div class="client-info">
+              <p class="client-name">Nova Solutions</p>
+            </div>
+            <div class="feedback-logo">
+              <img src="./assets/novalogo.PNG" alt="Nova Logo" class="nova-logo">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Testimonio 7 -->
+        <div class="swiper-slide feedback-card">
+          <p class="feedback-text">
+            "Encontramos un aliado para expandir nuestra operación en Latam."
+          </p>
+          <div class="feedback-client">
+            <div class="client-info">
+              <p class="client-name">Valantic</p>
+            </div>
+            <div class="feedback-logo">
+              <img src="./assets/valantic.jpeg" alt="Valantic Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Controles de navegación para el slider -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <!-- Paginación del slider -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  
+  <!-- 
+    Sección de Llamado a la Acción: Invita a los usuarios a ponerse en contacto para conocer más sobre las soluciones financieras.
+    Combina texto persuasivo con una imagen ilustrativa.
+  -->
+  <section class="financial-experience-box" data-aos="fade-up">
+    <div class="financial-box-content">
+      <h2 class="financial-title">¡Eleva tu Experiencia Financiera!</h2>
+      <p class="financial-description">
+        Ponte en contacto con nuestro equipo y descubre cómo podemos impulsar tu futuro digital en finanzas.
+      </p>
+      <div class="financial-buttons">
+        <!-- Botón que redirige a la sección "About Us" mediante la función irAboutUs() -->
+        <button class="btn btn-secondary" (click)="irAboutUs()">Saber Más</button>
+      </div>
+    </div>
+    <div class="financial-box-image">
+      <img src="./assets/secretaria.jpeg" alt="Financial Experience" class="financial-image">
+    </div>
+  </section>
+  
+  <!-- 
+    Sección Final (Footer): Contiene el logo de la empresa, menú de navegación y enlaces a redes sociales.
+    Esta sección se muestra al final de la página.
+  -->
   <div class="bg-white py-8">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
-      <!-- Logo -->
+      <!-- Logo de la empresa con redirección a la página de inicio -->
       <div class="flex-1">
         <button routerLink="/inicio">
           <img
@@ -261,20 +322,23 @@
         </button>
       </div>
   
-      <!-- Menú de navegación -->
+      <!-- Menú de navegación principal -->
       <nav class="flex flex-wrap justify-center gap-4">
-         <button mat-button routerLink="/servicios" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-        <span>Servicios</span>
-      </button>
-      <button mat-button routerLink="/contacto" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-        <span>Contacto</span>
-      </button>
-      <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-        <span>Nosotros</span>
-      </button>
+        <button mat-button routerLink="/servicios" class="flex items-center space-x-2 
+        text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+          <span>Servicios</span>
+        </button>
+        <button mat-button routerLink="/contacto" class="flex items-center space-x-2 
+        text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+          <span>Contacto</span>
+        </button>
+        <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 
+        text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+          <span>Nosotros</span>
+        </button>
       </nav>
   
-      <!-- Redes sociales -->
+      <!-- Enlaces a redes sociales -->
       <div class="flex justify-center gap-4 text-blue-600 py-4">
         <a
           href="https://www.linkedin.com/in/rombo-works-007639220/"
@@ -286,3 +350,4 @@
       </div>
     </div>
   </div>
+  
