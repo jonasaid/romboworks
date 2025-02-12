@@ -2,44 +2,56 @@
 <html lang="es">
 
 <head>
+  <!-- Metadatos y enlaces a fuentes y estilos -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rombo Works - Sobre Nosotros</title>
-  <!-- Fuentes y estilos -->
+  <!-- Enlace a la fuente Roboto -->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <!-- Enlace a Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Enlace a Font Awesome para iconos adicionales -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Enlace a la hoja de estilos específica del componente "sobre-nosotros" -->
   <link href="./sobre-nosotros.component.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 font-roboto text-gray-800">
-
-
   
-  <!-- Sección de introducción -->
+  <!-- ================================================
+       Sección de Introducción
+       - Presenta el mensaje principal y el eslogan de la empresa.
+       - Se utiliza un fondo de imagen y animaciones AOS.
+       ================================================ -->
   <section class="intro bg-cover bg-center text-center text-black p-8" data-aos="fade-up"
     style="background-image: url('/assets/v36_12598.png');">
+    <!-- Título principal con fuente grande y color personalizado -->
     <p class="text-4xl font-extrabold text-rombo-blue">Innovación en Desarrollo de Software para el Sector Financiero</p>
     <div class="my-4"></div>
+    <!-- Párrafo introductorio con descripción de la empresa -->
     <p class="mt-8  mx-auto text-xl leading-loose">
         Bienvenidos a <strong>Rombo Works</strong>, su nuevo aliado en soluciones de software innovador para el sector financiero. 
         Nos especializamos en la <strong>creación de tecnología de vanguardia que transforma la operativa financiera</strong> y maximiza la eficiencia.
     </p>
-
   </section>
 
-  
-  <!-- Sección de Misión, Visión y Propuesta de Valor -->
-
+  <!-- ================================================
+       Sección de Misión, Visión y Propuesta de Valor
+       - Muestra tres tarjetas que describen la misión, visión y propuesta de valor de la empresa.
+       - Cada tarjeta contiene un título y un párrafo descriptivo.
+       ================================================ -->
   <section class="mission-vision bg-white p-8" data-aos="fade-up">
+    <!-- Título de la sección -->
     <h2 class="text-3xl font-semibold text-center mb-6 text-custom-blue">Compromiso y Liderazgo</h2>
 
+    <!-- Grid de tarjetas para Misión, Visión y Propuesta de Valor -->
     <div class="card-grid grid gap-8 md:grid-cols-3">
       <!-- Tarjeta de Misión -->
       <div class="card p-6 bg-gray-100 rounded-lg shadow-lg">
         <h3 class="text-xl font-bold text-blue-500 mb-4">Misión</h3>
         <p class="text-gray-700">
-          Proveer soluciones tecnológicas disruptivas que impulsen la transformación digital del sector financiero, asegurando eficiencia, seguridad y una experiencia de usuario superior.
+          Proveer soluciones tecnológicas disruptivas que impulsen la transformación digital del sector 
+          financiero, asegurando eficiencia, seguridad y una experiencia de usuario superior.
         </p>
       </div>
   
@@ -47,41 +59,52 @@
       <div class="card p-6 bg-gray-100 rounded-lg shadow-lg">
         <h3 class="text-xl font-bold text-blue-500 mb-4">Visión</h3>
         <p class="text-gray-700">
-          Convertirnos en líderes reconocidos en el desarrollo de software financiero innovador, contribuyendo al éxito y crecimiento sostenible de nuestros clientes.
+          Convertirnos en líderes reconocidos en el desarrollo de software financiero innovador, 
+          contribuyendo al éxito y crecimiento sostenible de nuestros clientes.
         </p>
       </div>
   
-      <!-- Tarjeta de Nuestra Empresa -->
+      <!-- Tarjeta de Propuesta de Valor -->
       <div class="card p-6 bg-gray-100 rounded-lg shadow-lg">
         <h3 class="text-xl font-bold text-blue-500 mb-4">Propuesta de Valor</h3>
         <p class="text-gray-700">
-          Convertirnos en un aliado estratégico para las instituciones financieras que coadyuve en la generación de productos y servicios que resuelvan las necesidades de sus clientes con propuestas en tecnología innovadora.
+          Convertirnos en un aliado estratégico para las instituciones financieras que coadyuve en la generación de productos 
+          y servicios que resuelvan las necesidades de sus clientes con propuestas en tecnología innovadora.
         </p>
       </div>
     </div>
   </section>
   
-
-  <!-- Sección de Equipo -->
+  <!-- ================================================
+       Sección de Equipo
+       - Presenta a los miembros del equipo con una imagen, nombre, puesto y breve descripción.
+       - Utiliza un grid responsivo para distribuir las tarjetas de los miembros.
+       ================================================ -->
   <section class="team bg-gray-50 p-8" data-aos="fade-up">
+    <!-- Título y descripción introductoria de la sección del equipo -->
     <h2 class="text-3xl font-semibold text-center text-gray-900">Nuestro Equipo</h2>
     <p class="text-center text-gray-600 mt-2">
       Un grupo de profesionales apasionados por la tecnología y la transformación digital.
     </p>
     
+    <!-- Grid de miembros del equipo -->
     <div class="team-members mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       <!-- Miembro 1 -->
       <div class="member bg-white p-6 rounded-lg shadow-lg text-center">
+        <!-- Imagen del miembro -->
         <img src="assets/ismael.jpg" alt="Foto de Ismael" class="w-24 h-24 rounded-full mx-auto">
+        <!-- Nombre del miembro -->
         <h3 class="mt-4 text-xl font-semibold text-gray-900">Ismael Hernández</h3>
+        <!-- Puesto o rol del miembro -->
         <p class="text-blue-500">CEO & Fundador</p>
+        <!-- Breve descripción del miembro -->
         <p class="mt-2 text-gray-600">
           Con más de 15 años de experiencia liderando proyectos de innovación financiera, 
           Ismael guía la visión estratégica de Rombo Works.
         </p>
       </div>
 
-      <!-- Ejemplo para otro miembro (replica según sea necesario) -->
+      <!-- Se pueden agregar más miembros replicando la estructura de la tarjeta -->
       <!--
       <div class="member bg-white p-6 rounded-lg shadow-lg text-center">
         <img src="path/to/image2.jpg" alt="Foto de Marta" class="w-24 h-24 rounded-full mx-auto">
@@ -92,67 +115,79 @@
         </p>
       </div>
       -->
-
-        </div>
+    </div>
   </section>
 
-   <!-- Sección de Contacto -->
+  <!-- ================================================
+       Sección de Contacto
+       - Invita a los usuarios a ponerse en contacto.
+       - Incluye un pequeño mensaje y un botón de contacto que redirige a la página de contacto.
+       ================================================ -->
   <section class="contact bg-white p-8 text-center" data-aos="fade-up">
+    <!-- Texto pequeño introductorio -->
     <p class="text-sm text-blue-500 uppercase text-custom-blue-sub">Conecta</p>
+    <!-- Título de la sección -->
     <h2 class="text-3xl font-semibold text-blue-500 mb-2 text-custom-blue">Contáctanos</h2>
+    <!-- Descripción que motiva al usuario a contactarse -->
     <p class="text-gray-600 mb-8">
         ¿Listo para dar el siguiente paso? Queremos escuchar tus desafíos e impulsarte con nuestras soluciones.
     </p>
 
+    <!-- Contenedor para el botón de contacto -->
     <div class="contact-methods justify-center text-center">
       <div class="financial-buttons">
-        <button class="contact-button" routerLink="/contacto" >
+        <!-- Botón de contacto que utiliza routerLink para navegar a la página de contacto -->
+        <button class="contact-button" routerLink="/contacto">
           Ingresa aqui para contactarnos
         </button>
       </div>
-      
     </div>
   </section>
 
-  <!-- Sección final (contenido original del header) -->
-<div class="bg-white py-8">
-  <div
-    class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8"
-  >
-    <!-- Logo -->
-    <div>
-      <button routerLink="/inicio">
-      <img
-        src="./assets/rombo-works-logo.png"
-        alt="Rombo Works Logo"
-        class="h-20 md:h-32"
-      />
-      </button>
-    </div>
+  <!-- ================================================
+       Sección Final (Footer)
+       - Contiene el logo, el menú de navegación y enlaces a redes sociales.
+       - Se utiliza para la navegación final en la parte inferior del sitio.
+       ================================================ -->
+  <div class="bg-white py-8">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Logo: Redirige a la página de inicio -->
+      <div>
+        <button routerLink="/inicio">
+          <img
+            src="./assets/rombo-works-logo.png"
+            alt="Rombo Works Logo"
+            class="h-20 md:h-32"
+          />
+        </button>
+      </div>
 
-    <!-- Menú de navegación -->
-    <nav class="flex flex-wrap justify-center gap-4">
-       <button mat-button routerLink="/servicios" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Servicios</span>
-    </button>
-    <button mat-button routerLink="/contacto" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Contacto</span>
-    </button>
-    <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
-      <span>Nosotros</span>
-    </button>
-    </nav>
+      <!-- Menú de navegación: Enlaces a secciones principales -->
+      <nav class="flex flex-wrap justify-center gap-4">
+         <button mat-button routerLink="/servicios" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+          <span>Servicios</span>
+        </button>
+        <button mat-button routerLink="/contacto" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+          <span>Contacto</span>
+        </button>
+        <button mat-button routerLink="/sobre-nosotros" class="flex items-center space-x-2 text-gray-700 hover:text-rombo-blue hover:scale-105 transition duration-300 text-lg">
+          <span>Nosotros</span>
+        </button>
+      </nav>
 
-    <!-- Redes sociales -->
-    <div class="flex justify-center gap-4 text-blue-600 py-4">
-      <a
-        href="https://www.linkedin.com/in/rombo-works-007639220/"
-        class="hover:opacity-70 text-6xl"
-        aria-label="LinkedIn"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
+      <!-- Enlaces a redes sociales: Por ejemplo, LinkedIn -->
+      <div class="flex justify-center gap-4 text-blue-600 py-4">
+        <a
+          href="https://www.linkedin.com/in/rombo-works-007639220/"
+          class="hover:opacity-70 text-6xl"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
     </div>
   </div>
 
+</body>
 
+</html>

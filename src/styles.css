@@ -1,30 +1,59 @@
+/* Importa las directivas base, components y utilities de Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 
+   Estilos base para los elementos html y body:
+   - Se establece la altura al 100% para asegurar que ocupen todo el espacio vertical.
+   - Se eliminan los márgenes predeterminados.
+   - Se define la familia tipográfica principal de la aplicación.
+*/
 html, body {
   height: 100%;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/* 
+   Estilos para el componente raíz de Angular (<app-root>):
+   - Se configura para usar un layout flexible en columna.
+   - Se asegura que el componente ocupe al menos el 100% de la altura de la ventana (100vh).
+*/
 app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* 
+   Estilos para el elemento <router-outlet>:
+   - Permite que el contenido dinámico que se renderiza mediante el enrutamiento crezca para ocupar el espacio disponible.
+*/
 router-outlet {
   flex-grow: 1;
 }
+
+/* 
+   Estilos para los botones de Angular Material (.mat-button):
+   - Se elimina el contorno al enfocar el botón para una apariencia más limpia.
+*/
 .mat-button {
   outline: none !important; /* Elimina el cuadro de enfoque */
 }
 
+/* 
+   Estilos para el elemento ripple interno de los botones (.mat-ripple-element):
+   - Se establece un fondo transparente para evitar que aparezca un efecto ripple con fondo colorido.
+*/
 .mat-button .mat-ripple-element {
   background-color: transparent !important; /* Ripple transparente */
 }
 
+/* 
+   Estilos para el estado hover de los botones (.mat-button:hover):
+   - Se elimina cualquier cambio de fondo (como el fondo gris) cuando el usuario pasa el cursor sobre el botón.
+*/
 .mat-button:hover {
   background-color: transparent !important; /* Sin fondo gris al hover */
 }

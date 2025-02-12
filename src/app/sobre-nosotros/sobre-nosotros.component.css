@@ -1,8 +1,16 @@
-/* Reset general */
+/* ===========================
+   Reset General y Estilos Base
+   =========================== */
+
+/* Aplica el box-sizing border-box a todos los elementos para que el padding y el border se incluyan en el ancho y alto total */
 * {
     box-sizing: border-box;
 }
 
+/* Estilos básicos para el body:
+   - Se establece la fuente Roboto o una sans-serif.
+   - Se eliminan márgenes y rellenos.
+   - Se define un interlineado, tamaño de fuente y color de texto predeterminados. */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -12,18 +20,33 @@ body {
     color: #00A0DE;
 }
 
+/* ===========================
+   Clases de Texto Personalizadas
+   =========================== */
+
+/* Clase para texto en color azul personalizado, con tamaño de fuente y peso en negrita */
 .text-custom-blue {
     color: #00A0DE;
     font-size: 2rem; /* Ajusta el tamaño según lo necesario */
     font-weight: bold;
-  }
+}
 
-  .text-custom-blue-sub {
+/* Clase para un subtítulo o texto secundario en color azul personalizado */
+.text-custom-blue-sub {
     color: #00A0DE;
     font-size: 1rem; /* Ajusta el tamaño según lo necesario */
     font-weight: bold;
 }
 
+/* ===========================
+   Botón de Contacto
+   =========================== */
+
+/* Estilos para el botón de contacto:
+   - Define un diseño inline-block con padding.
+   - Establece el tamaño y peso de la fuente, color de texto y fondo.
+   - Redondea las esquinas y quita subrayado en el texto.
+   - Agrega una transición para efectos de hover. */
 .contact-button {
     display: inline-block;
     padding: 15px 30px;
@@ -34,17 +57,22 @@ body {
     border-radius: 5px;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-  }
+}
 
-  .contact-button:hover {
+/* Efecto hover para el botón de contacto:
+   - Aumenta el tamaño (escala) y agrega una sombra para resaltar el botón. */
+.contact-button:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  
+}
 
-/* HEADER */
+/* ===========================
+   HEADER (Encabezado)
+   =========================== */
+
+/* Estilos para el encabezado principal:
+   - Fondo blanco, padding y un borde inferior sutil.
+   - Usa flexbox para distribuir y centrar el contenido. */
 .header {
     background: #fff;
     padding: 10px 20px;
@@ -54,16 +82,22 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
+/* Estilos para el logo dentro del encabezado */
 .header .logo {
     font-size: 24px;
     font-weight: bold;
 }
 
+/* Menú de navegación en el header:
+   - Se utiliza flexbox con un espacio entre elementos. */
 .nav {
     display: flex;
     gap: 15px;
 }
 
+/* Estilos para los enlaces del menú de navegación:
+   - Quita subrayado, define color y peso de la fuente.
+   - Agrega transición en el color para el efecto hover. */
 .nav a {
     text-decoration: none;
     color: #101720;
@@ -71,12 +105,16 @@ body {
     transition: color 0.3s;
 }
 
+/* Efecto hover en los enlaces del menú: cambia el color a azul personalizado */
 .nav a:hover {
     color: #00A0DE;
 }
 
+/* ===========================
+   RESPONSIVIDAD DEL HEADER
+   =========================== */
 
-/* RESPONSIVIDAD DEL HEADER */
+/* Estilos para pantallas con ancho máximo de 768px */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -118,9 +156,10 @@ body {
 
     .card-grid {
         grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-      }
+    }
 }
 
+/* Estilos para pantallas con ancho máximo de 480px */
 @media (max-width: 480px) {
     .header-container {
         padding: 10px;
@@ -139,7 +178,13 @@ body {
     }
 }
 
-/* FOOTER */
+/* ===========================
+   FOOTER
+   =========================== */
+
+/* Estilos para el pie de página:
+   - Fondo blanco, borde superior, padding y centrado del texto.
+   - Se agrega un margen inferior para separar del contenido siguiente. */
 .footer {
     background-color: #ffffff;
     border-top: 1px solid #e5e7eb;
@@ -148,6 +193,7 @@ body {
     margin-bottom: 32px;
 }
 
+/* Contenedor para elementos legales dentro del footer */
 .footer-legal {
     display: flex;
     align-items: center;
@@ -155,12 +201,16 @@ body {
     flex-wrap: wrap;
 }
 
+/* Estilos para párrafos dentro del contenedor legal del footer */
 .footer-legal p {
     color: #666666;
     font-size: 0.875rem;
     margin-right: 10px;
 }
 
+/* Estilos para enlaces dentro del contenedor legal del footer:
+   - Se definen color, tamaño, sin subrayado y margen.
+   - Se aplica una transición en el color para el hover. */
 .footer-legal a {
     color: #666666;
     font-size: 0.875rem;
@@ -169,17 +219,23 @@ body {
     transition: color 0.3s;
 }
 
+/* Efecto hover para los enlaces del footer: cambia el color a un azul diferente */
 .footer-legal a:hover {
     color: #007bff;
 }
 
-/* SECCIÓN DEL EQUIPO */
+/* ===========================
+   SECCIÓN DEL EQUIPO
+   =========================== */
+
+/* Contenedor principal para la sección del equipo */
 .team {
     background-color: #f9f9f9;
     padding: 2rem;
     text-align: center;
 }
 
+/* Título principal de la sección del equipo */
 .team h2 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -187,6 +243,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Contenedor para los miembros del equipo, con flexbox para distribuirlos */
 .team-members {
     display: flex;
     flex-wrap: wrap;
@@ -194,6 +251,7 @@ body {
     gap: 2rem;
 }
 
+/* Tarjeta individual para cada miembro del equipo */
 .member {
     background-color: #fff;
     padding: 1.5rem;
@@ -204,11 +262,14 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el hover */
 }
 
+/* Efecto hover para las tarjetas de miembros:
+   - Se mueve hacia arriba y aumenta de tamaño ligeramente, con una sombra más pronunciada. */
 .member:hover {
     transform: translateY(-10px) scale(1.05); /* Sube y aumenta el tamaño */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Más sombra */
 }
 
+/* Estilos para la imagen del miembro: tamaño fijo, forma circular y ajuste de objeto */
 .member img {
     width: 100px;
     height: 100px;
@@ -217,32 +278,39 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Título del miembro */
 .member h3 {
     font-size: 1.25rem;
     font-weight: bold;
     color: #333;
 }
 
+/* Descripción o cargo del miembro */
 .member p {
     font-size: 1rem;
     color: #666;
     margin-top: 0.5rem;
 }
 
+/* Variante de color azul para texto específico dentro de la tarjeta del miembro */
 .member p.text-blue-500 {
     color: #00A0DE;
     font-weight: bold;
 }
 
+/* ===========================
+   SECCIÓN DE MISIÓN Y VISIÓN
+   =========================== */
 
-/* SECCIÓN DE MISION VISION */
+/* Contenedor de grid para tarjetas de misión y visión */
 .card-grid {
     display: grid;
     gap: 20px;
     justify-content: center;
-  }
-  
-  .card {
+}
+
+/* Estilos para cada tarjeta individual en la sección de misión y visión */
+.card {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -250,27 +318,25 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 0 auto;
     max-width: 800px;
-  }
-  
-  .card:hover {
+}
+
+/* Efecto hover para las tarjetas: se eleva ligeramente y aumenta la sombra */
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card h3 {
+}
+
+/* Título de la tarjeta, en color azul personalizado */
+.card h3 {
     color: #00A0DE;
     margin-bottom: 10px;
     font-size: 1.25rem;
     font-weight: bold;
-  }
-  
-  .card p {
+}
+
+/* Párrafo de descripción dentro de la tarjeta */
+.card p {
     color: #4a4a4a;
     font-size: 1rem;
     line-height: 1.6;
-  }
-
-
-  
-
-  
+}
